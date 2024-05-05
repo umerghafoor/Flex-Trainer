@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
+    </Reference>
     <Reference Include="ComponentFactory.Krypton.Docking">
       <HintPath>..\..\..\..\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
     </Reference>
@@ -48,8 +51,15 @@
     <Reference Include="ComponentFactory.Krypton.Workspace">
       <HintPath>..\..\..\..\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
     </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -59,16 +69,163 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="componets\card_workout_goals.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="componets\card_workout_goals.Designer.cs">
+      <DependentUpon>card_workout_goals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="componets\card_feedback.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="componets\card_feedback.Designer.cs">
+      <DependentUpon>card_feedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="componets\card_diet_plan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="componets\card_diet_plan.Designer.cs">
+      <DependentUpon>card_diet_plan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gym_member.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gym_member.Designer.cs">
+      <DependentUpon>gym_member.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gym_owner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gym_owner.Designer.cs">
+      <DependentUpon>gym_owner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gym_requests.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gym_requests.Designer.cs">
+      <DependentUpon>gym_requests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gym_trainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gym_trainer.Designer.cs">
+      <DependentUpon>gym_trainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="trainer_page2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="trainer_page2.Designer.cs">
+      <DependentUpon>trainer_page2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="signup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="signup.Designer.cs">
+      <DependentUpon>signup.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="componets\trainer_home.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="componets\trainer_home.Designer.cs">
+      <DependentUpon>trainer_home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="componets\trainer_workout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="componets\trainer_workout.Designer.cs">
+      <DependentUpon>trainer_workout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="componets\traner_diet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="componets\traner_diet.Designer.cs">
+      <DependentUpon>traner_diet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="componets\traner_feedback.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="componets\traner_feedback.Designer.cs">
+      <DependentUpon>traner_feedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="componets\user_home.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="componets\user_home.Designer.cs">
+      <DependentUpon>user_home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="componets\card_deit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="componets\card_deit.Designer.cs">
+      <DependentUpon>card_deit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user_page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="user_page.Designer.cs">
+      <DependentUpon>user_page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="componets\card_workout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="componets\card_workout.Designer.cs">
+      <DependentUpon>card_workout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user_page2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="user_page2.Designer.cs">
+      <DependentUpon>user_page2.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="componets\card_deit.resx">
+      <DependentUpon>card_deit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="componets\card_workout_goals.resx">
+      <DependentUpon>card_workout_goals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="componets\card_feedback.resx">
+      <DependentUpon>card_feedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="componets\card_diet_plan.resx">
+      <DependentUpon>card_diet_plan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="componets\traner_feedback.resx">
+      <DependentUpon>traner_feedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gym_member.resx">
+      <DependentUpon>gym_member.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gym_owner.resx">
+      <DependentUpon>gym_owner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gym_requests.resx">
+      <DependentUpon>gym_requests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gym_trainer.resx">
+      <DependentUpon>gym_trainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="signup.resx">
+      <DependentUpon>signup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="trainer_page2.resx">
+      <DependentUpon>trainer_page2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -78,6 +235,28 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="componets\trainer_home.resx">
+      <DependentUpon>trainer_home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="componets\trainer_workout.resx">
+      <DependentUpon>trainer_workout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="componets\traner_diet.resx">
+      <DependentUpon>traner_diet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="componets\user_home.resx">
+      <DependentUpon>user_home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user_page.resx">
+      <DependentUpon>user_page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="componets\card_workout.resx">
+      <DependentUpon>card_workout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user_page2.resx">
+      <DependentUpon>user_page2.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -90,6 +269,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="template\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
