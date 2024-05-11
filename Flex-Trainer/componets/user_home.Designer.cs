@@ -34,14 +34,14 @@
             this.guna2GradientPanel5 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2CircleProgressBar1 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.user_gmail = new System.Windows.Forms.Label();
+            this.username_2 = new System.Windows.Forms.Label();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2ToggleSwitch1 = new Guna.UI2.WinForms.Guna2ToggleSwitch();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.user_gmail_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.user_name = new System.Windows.Forms.Label();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label22 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -80,8 +80,8 @@
             this.guna2GradientPanel5.BorderRadius = 12;
             this.guna2GradientPanel5.BorderThickness = 4;
             this.guna2GradientPanel5.Controls.Add(this.guna2CircleProgressBar1);
-            this.guna2GradientPanel5.Controls.Add(this.label6);
-            this.guna2GradientPanel5.Controls.Add(this.label5);
+            this.guna2GradientPanel5.Controls.Add(this.user_gmail);
+            this.guna2GradientPanel5.Controls.Add(this.username_2);
             this.guna2GradientPanel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(188)))), ((int)(((byte)(255)))));
             this.guna2GradientPanel5.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(188)))), ((int)(((byte)(255)))));
             this.guna2GradientPanel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -120,37 +120,37 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "78 %";
             // 
-            // label6
+            // user_gmail
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(17, 81);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(198, 19);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "umerghaforr@gmail.com";
+            this.user_gmail.AutoSize = true;
+            this.user_gmail.BackColor = System.Drawing.Color.Transparent;
+            this.user_gmail.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
+            this.user_gmail.ForeColor = System.Drawing.Color.White;
+            this.user_gmail.Location = new System.Drawing.Point(17, 81);
+            this.user_gmail.Name = "user_gmail";
+            this.user_gmail.Size = new System.Drawing.Size(198, 19);
+            this.user_gmail.TabIndex = 3;
+            this.user_gmail.Text = "umerghaforr@gmail.com";
             // 
-            // label5
+            // username_2
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(14, 35);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(231, 37);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Umer Ghafoor";
+            this.username_2.AutoSize = true;
+            this.username_2.BackColor = System.Drawing.Color.Transparent;
+            this.username_2.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold);
+            this.username_2.ForeColor = System.Drawing.Color.White;
+            this.username_2.Location = new System.Drawing.Point(14, 35);
+            this.username_2.Name = "username_2";
+            this.username_2.Size = new System.Drawing.Size(231, 37);
+            this.username_2.TabIndex = 2;
+            this.username_2.Text = "Umer Ghafoor";
             // 
             // guna2GradientPanel1
             // 
             this.guna2GradientPanel1.Controls.Add(this.guna2HtmlLabel2);
             this.guna2GradientPanel1.Controls.Add(this.guna2ToggleSwitch1);
-            this.guna2GradientPanel1.Controls.Add(this.guna2HtmlLabel1);
+            this.guna2GradientPanel1.Controls.Add(this.user_gmail_Label);
             this.guna2GradientPanel1.Controls.Add(this.guna2Button2);
-            this.guna2GradientPanel1.Controls.Add(this.label1);
+            this.guna2GradientPanel1.Controls.Add(this.user_name);
             this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
@@ -183,14 +183,14 @@
             this.guna2ToggleSwitch1.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.guna2ToggleSwitch1.UncheckedState.InnerColor = System.Drawing.Color.White;
             // 
-            // guna2HtmlLabel1
+            // user_gmail_Label
             // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(27, 59);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(177, 22);
-            this.guna2HtmlLabel1.TabIndex = 3;
-            this.guna2HtmlLabel1.Text = "umerghaforr@gmail.com";
+            this.user_gmail_Label.BackColor = System.Drawing.Color.Transparent;
+            this.user_gmail_Label.Location = new System.Drawing.Point(27, 59);
+            this.user_gmail_Label.Name = "user_gmail_Label";
+            this.user_gmail_Label.Size = new System.Drawing.Size(177, 22);
+            this.user_gmail_Label.TabIndex = 3;
+            this.user_gmail_Label.Text = "umerghaforr@gmail.com";
             // 
             // guna2Button2
             // 
@@ -211,15 +211,15 @@
             this.guna2Button2.Text = "Notification";
             this.guna2Button2.UseTransparentBackground = true;
             // 
-            // label1
+            // user_name
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(22, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(174, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Umer Ghafoor";
+            this.user_name.AutoSize = true;
+            this.user_name.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.user_name.Location = new System.Drawing.Point(22, 27);
+            this.user_name.Name = "user_name";
+            this.user_name.Size = new System.Drawing.Size(174, 29);
+            this.user_name.TabIndex = 0;
+            this.user_name.Text = "Umer Ghafoor";
             // 
             // guna2GradientPanel3
             // 
@@ -477,6 +477,7 @@
             this.Controls.Add(this.guna2GradientPanel5);
             this.Name = "user_home";
             this.Size = new System.Drawing.Size(1260, 890);
+            this.Load += new System.EventHandler(this.user_home_Load);
             this.guna2GradientPanel5.ResumeLayout(false);
             this.guna2GradientPanel5.PerformLayout();
             this.guna2CircleProgressBar1.ResumeLayout(false);
@@ -501,14 +502,14 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label user_gmail;
+        private System.Windows.Forms.Label username_2;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2ToggleSwitch guna2ToggleSwitch1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel user_gmail_Label;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label user_name;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel3;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label19;

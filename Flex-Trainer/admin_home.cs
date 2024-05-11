@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Flex_Trainer
 {
-    public partial class signup : Form
+    public partial class admin_home : UserControl
     {
-        public signup()
+        public admin_home()
         {
             InitializeComponent();
-        }
-
-        private void kryptonButton3_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

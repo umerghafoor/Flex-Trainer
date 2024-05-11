@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Flex_Trainer
 {
-    public partial class gym_member : UserControl
+    public partial class admin_requests : UserControl
     {
-        public gym_member()
+        public admin_requests()
         {
             InitializeComponent();
         }

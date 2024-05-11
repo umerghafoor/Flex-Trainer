@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.day_time = new System.Windows.Forms.Label();
+            this.cals = new System.Windows.Forms.Label();
+            this.fats = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
+            this.Type_diet = new System.Windows.Forms.Label();
+            this.Diet_Name = new System.Windows.Forms.Label();
             this.guna2GradientPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,12 +43,12 @@
             this.guna2GradientPanel3.BorderColor = System.Drawing.Color.Transparent;
             this.guna2GradientPanel3.BorderRadius = 20;
             this.guna2GradientPanel3.BorderThickness = 4;
-            this.guna2GradientPanel3.Controls.Add(this.label7);
-            this.guna2GradientPanel3.Controls.Add(this.label5);
-            this.guna2GradientPanel3.Controls.Add(this.label2);
+            this.guna2GradientPanel3.Controls.Add(this.day_time);
+            this.guna2GradientPanel3.Controls.Add(this.cals);
+            this.guna2GradientPanel3.Controls.Add(this.fats);
             this.guna2GradientPanel3.Controls.Add(this.label1);
-            this.guna2GradientPanel3.Controls.Add(this.label22);
-            this.guna2GradientPanel3.Controls.Add(this.label21);
+            this.guna2GradientPanel3.Controls.Add(this.Type_diet);
+            this.guna2GradientPanel3.Controls.Add(this.Diet_Name);
             this.guna2GradientPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2GradientPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2GradientPanel3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -57,42 +57,43 @@
             this.guna2GradientPanel3.Name = "guna2GradientPanel3";
             this.guna2GradientPanel3.Size = new System.Drawing.Size(412, 204);
             this.guna2GradientPanel3.TabIndex = 10;
+            this.guna2GradientPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel3_Paint);
             // 
-            // label7
+            // day_time
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold);
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(315, 149);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(87, 37);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "High";
+            this.day_time.AutoSize = true;
+            this.day_time.BackColor = System.Drawing.Color.Transparent;
+            this.day_time.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.day_time.ForeColor = System.Drawing.Color.White;
+            this.day_time.Location = new System.Drawing.Point(270, 152);
+            this.day_time.Name = "day_time";
+            this.day_time.Size = new System.Drawing.Size(110, 29);
+            this.day_time.TabIndex = 12;
+            this.day_time.Text = "Morning";
             // 
-            // label5
+            // cals
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(33, 152);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 18);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "cal = 333";
+            this.cals.AutoSize = true;
+            this.cals.BackColor = System.Drawing.Color.Transparent;
+            this.cals.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cals.ForeColor = System.Drawing.Color.White;
+            this.cals.Location = new System.Drawing.Point(33, 152);
+            this.cals.Name = "cals";
+            this.cals.Size = new System.Drawing.Size(72, 18);
+            this.cals.TabIndex = 11;
+            this.cals.Text = "cal = 333";
             // 
-            // label2
+            // fats
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(33, 134);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 18);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "fats =100";
+            this.fats.AutoSize = true;
+            this.fats.BackColor = System.Drawing.Color.Transparent;
+            this.fats.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fats.ForeColor = System.Drawing.Color.White;
+            this.fats.Location = new System.Drawing.Point(33, 134);
+            this.fats.Name = "fats";
+            this.fats.Size = new System.Drawing.Size(73, 18);
+            this.fats.TabIndex = 8;
+            this.fats.Text = "fats =100";
             // 
             // label1
             // 
@@ -106,29 +107,29 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Detials";
             // 
-            // label22
+            // Type_diet
             // 
-            this.label22.AutoSize = true;
-            this.label22.BackColor = System.Drawing.Color.Transparent;
-            this.label22.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.White;
-            this.label22.Location = new System.Drawing.Point(18, 72);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(222, 18);
-            this.label22.TabIndex = 6;
-            this.label22.Text = "Brief description of the workout";
+            this.Type_diet.AutoSize = true;
+            this.Type_diet.BackColor = System.Drawing.Color.Transparent;
+            this.Type_diet.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Type_diet.ForeColor = System.Drawing.Color.White;
+            this.Type_diet.Location = new System.Drawing.Point(18, 72);
+            this.Type_diet.Name = "Type_diet";
+            this.Type_diet.Size = new System.Drawing.Size(37, 18);
+            this.Type_diet.TabIndex = 6;
+            this.Type_diet.Text = "type";
             // 
-            // label21
+            // Diet_Name
             // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold);
-            this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(14, 35);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(174, 37);
-            this.label21.TabIndex = 2;
-            this.label21.Text = "Deit Name";
+            this.Diet_Name.AutoSize = true;
+            this.Diet_Name.BackColor = System.Drawing.Color.Transparent;
+            this.Diet_Name.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold);
+            this.Diet_Name.ForeColor = System.Drawing.Color.White;
+            this.Diet_Name.Location = new System.Drawing.Point(14, 35);
+            this.Diet_Name.Name = "Diet_Name";
+            this.Diet_Name.Size = new System.Drawing.Size(174, 37);
+            this.Diet_Name.TabIndex = 2;
+            this.Diet_Name.Text = "Deit Name";
             // 
             // card_diet_plan
             // 
@@ -137,6 +138,7 @@
             this.Controls.Add(this.guna2GradientPanel3);
             this.Name = "card_diet_plan";
             this.Size = new System.Drawing.Size(412, 204);
+            this.Load += new System.EventHandler(this.card_diet_plan_Load);
             this.guna2GradientPanel3.ResumeLayout(false);
             this.guna2GradientPanel3.PerformLayout();
             this.ResumeLayout(false);
@@ -146,11 +148,11 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel3;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label day_time;
+        private System.Windows.Forms.Label cals;
+        private System.Windows.Forms.Label fats;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label Type_diet;
+        private System.Windows.Forms.Label Diet_Name;
     }
 }

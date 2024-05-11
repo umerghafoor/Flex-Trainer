@@ -10,15 +10,20 @@ using System.Windows.Forms;
 
 namespace Flex_Trainer
 {
-    public partial class trainer_page2 : Form
+    public partial class page_trainer : Form
     {
-        public trainer_page2()
+        private string id;
+        SQL sql = new SQL();
+        public page_trainer(string id)
         {
             InitializeComponent();
             this.trainer_home1.Visible = true;
             this.trainer_workout1.Visible = false;
             this.traner_diet1.Visible = false;
             this.traner_feedback1.Visible = false;
+            this.id = id;
+            this.trainer_workout1.setUser(id, UserType.Trainer);
+            this.traner_diet1.setuser(id, UserType.Trainer);
 
         }
 
@@ -55,6 +60,12 @@ namespace Flex_Trainer
             this.trainer_workout1.Visible = false;
             this.traner_diet1.Visible = false;
             this.traner_feedback1.Visible = true;
+
+        }
+
+        private void page_trainer_Load(object sender, EventArgs e)
+        {
+            
 
         }
     }

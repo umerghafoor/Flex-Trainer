@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace Flex_Trainer
 {
-    public partial class traner_diet : UserControl
+    public partial class page_admin : Form
     {
-        public traner_diet()
+        public page_admin()
         {
             InitializeComponent();
         }
+
+      
     }
 }

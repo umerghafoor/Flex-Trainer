@@ -1,6 +1,6 @@
 ﻿namespace Flex_Trainer
 {
-    partial class gym_owner
+    partial class page_trainer
     {
         /// <summary>
         /// Required designer variable.
@@ -29,18 +29,23 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.logout_Button = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.gym_member1 = new Flex_Trainer.gym_member();
-            this.gym_trainer1 = new Flex_Trainer.gym_trainer();
-            this.gym_requests1 = new Flex_Trainer.gym_requests();
+            this.traner_feedback1 = new Flex_Trainer.traner_feedback();
+            this.traner_diet1 = new Flex_Trainer.coman_diet();
+            this.trainer_workout1 = new Flex_Trainer.coman_workout();
+            this.trainer_home1 = new Flex_Trainer.trainer_home();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2Panel1.Controls.Add(this.logout_Button);
+            this.guna2Panel1.Controls.Add(this.guna2Button4);
             this.guna2Panel1.Controls.Add(this.guna2Button3);
             this.guna2Panel1.Controls.Add(this.guna2Button2);
             this.guna2Panel1.Controls.Add(this.guna2Button1);
@@ -49,7 +54,48 @@
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(222, 890);
-            this.guna2Panel1.TabIndex = 2;
+            this.guna2Panel1.TabIndex = 0;
+            // 
+            // logout_Button
+            // 
+            this.logout_Button.BackColor = System.Drawing.Color.Transparent;
+            this.logout_Button.BorderRadius = 12;
+            this.logout_Button.CheckedState.FillColor = System.Drawing.Color.White;
+            this.logout_Button.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.logout_Button.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.logout_Button.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.logout_Button.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.logout_Button.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.logout_Button.FillColor = System.Drawing.Color.White;
+            this.logout_Button.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logout_Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.logout_Button.Location = new System.Drawing.Point(40, 827);
+            this.logout_Button.Name = "logout_Button";
+            this.logout_Button.Size = new System.Drawing.Size(136, 51);
+            this.logout_Button.TabIndex = 15;
+            this.logout_Button.Text = "Logout";
+            this.logout_Button.UseTransparentBackground = true;
+            // 
+            // guna2Button4
+            // 
+            this.guna2Button4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button4.BorderRadius = 20;
+            this.guna2Button4.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.guna2Button4.CheckedState.FillColor = System.Drawing.Color.White;
+            this.guna2Button4.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button4.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button4.ForeColor = System.Drawing.Color.White;
+            this.guna2Button4.Location = new System.Drawing.Point(21, 514);
+            this.guna2Button4.Name = "guna2Button4";
+            this.guna2Button4.Size = new System.Drawing.Size(180, 63);
+            this.guna2Button4.TabIndex = 3;
+            this.guna2Button4.Text = "Feedback";
+            this.guna2Button4.UseTransparentBackground = true;
+            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
             // guna2Button3
             // 
@@ -68,7 +114,7 @@
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.Size = new System.Drawing.Size(180, 63);
             this.guna2Button3.TabIndex = 2;
-            this.guna2Button3.Text = "Account Requests";
+            this.guna2Button3.Text = "Deit Plans";
             this.guna2Button3.UseTransparentBackground = true;
             this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
@@ -89,7 +135,7 @@
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(180, 59);
             this.guna2Button2.TabIndex = 1;
-            this.guna2Button2.Text = "Trainer Reports";
+            this.guna2Button2.Text = "Workout";
             this.guna2Button2.UseTransparentBackground = true;
             this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
@@ -111,45 +157,57 @@
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(180, 58);
             this.guna2Button1.TabIndex = 0;
-            this.guna2Button1.Text = "Member Reports";
+            this.guna2Button1.Text = "Home";
             this.guna2Button1.UseTransparentBackground = true;
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
-            // gym_member1
+            // traner_feedback1
             // 
-            this.gym_member1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gym_member1.Location = new System.Drawing.Point(222, 0);
-            this.gym_member1.Name = "gym_member1";
-            this.gym_member1.Size = new System.Drawing.Size(1267, 890);
-            this.gym_member1.TabIndex = 3;
+            this.traner_feedback1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.traner_feedback1.Location = new System.Drawing.Point(222, 0);
+            this.traner_feedback1.Name = "traner_feedback1";
+            this.traner_feedback1.Size = new System.Drawing.Size(1267, 890);
+            this.traner_feedback1.TabIndex = 1;
             // 
-            // gym_trainer1
+            // traner_diet1
             // 
-            this.gym_trainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gym_trainer1.Location = new System.Drawing.Point(222, 0);
-            this.gym_trainer1.Name = "gym_trainer1";
-            this.gym_trainer1.Size = new System.Drawing.Size(1267, 890);
-            this.gym_trainer1.TabIndex = 4;
+            this.traner_diet1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.traner_diet1.Location = new System.Drawing.Point(222, 0);
+            this.traner_diet1.Name = "traner_diet1";
+            this.traner_diet1.Padding = new System.Windows.Forms.Padding(12);
+            this.traner_diet1.Size = new System.Drawing.Size(1267, 890);
+            this.traner_diet1.TabIndex = 2;
             // 
-            // gym_requests1
+            // trainer_workout1
             // 
-            this.gym_requests1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gym_requests1.Location = new System.Drawing.Point(222, 0);
-            this.gym_requests1.Name = "gym_requests1";
-            this.gym_requests1.Size = new System.Drawing.Size(1267, 890);
-            this.gym_requests1.TabIndex = 5;
+            this.trainer_workout1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.trainer_workout1.Location = new System.Drawing.Point(222, 0);
+            this.trainer_workout1.Name = "trainer_workout1";
+            this.trainer_workout1.Padding = new System.Windows.Forms.Padding(12);
+            this.trainer_workout1.Size = new System.Drawing.Size(1267, 890);
+            this.trainer_workout1.TabIndex = 3;
             // 
-            // gym_owner
+            // trainer_home1
+            // 
+            this.trainer_home1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.trainer_home1.Location = new System.Drawing.Point(222, 0);
+            this.trainer_home1.Name = "trainer_home1";
+            this.trainer_home1.Size = new System.Drawing.Size(1267, 890);
+            this.trainer_home1.TabIndex = 4;
+            // 
+            // page_trainer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1489, 890);
-            this.Controls.Add(this.gym_requests1);
-            this.Controls.Add(this.gym_trainer1);
-            this.Controls.Add(this.gym_member1);
+            this.Controls.Add(this.trainer_home1);
+            this.Controls.Add(this.trainer_workout1);
+            this.Controls.Add(this.traner_diet1);
+            this.Controls.Add(this.traner_feedback1);
             this.Controls.Add(this.guna2Panel1);
-            this.Name = "gym_owner";
-            this.Text = "Form2";
+            this.Name = "page_trainer";
+            this.Text = "Trainer";
+            this.Load += new System.EventHandler(this.page_trainer_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -158,11 +216,14 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private gym_member gym_member1;
-        private gym_trainer gym_trainer1;
-        private gym_requests gym_requests1;
+        private traner_feedback traner_feedback1;
+        private coman_diet traner_diet1;
+        private coman_workout trainer_workout1;
+        private trainer_home trainer_home1;
+        private Guna.UI2.WinForms.Guna2Button logout_Button;
     }
 }

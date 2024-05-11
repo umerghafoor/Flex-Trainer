@@ -24,8 +24,27 @@ namespace Flex_Trainer
             chart1.Series["Series1"].Points.AddXY("Friday", 50);
             chart1.Series["Series1"].Points.AddXY("Saturday", 60);
             chart1.Series["Series1"].Points.AddXY("Sunday", 70);
+            card_workout card = new card_workout();
+            this.flowLayoutPanel1.Controls.Add(card);
+        }
+        public void setChartValue(int[] values)
+        {
+            chart1.Series["Series1"].Points.Clear();
+            chart1.Series["Series1"].Points.AddXY("Monday", values[0]);
+            chart1.Series["Series1"].Points.AddXY("Tuesday", values[1]);
+            chart1.Series["Series1"].Points.AddXY("Wednesday", values[2]);
+            chart1.Series["Series1"].Points.AddXY("Thursday", values[3]);
+            chart1.Series["Series1"].Points.AddXY("Friday", values[4]);
+            chart1.Series["Series1"].Points.AddXY("Saturday", values[5]);
+            chart1.Series["Series1"].Points.AddXY("Sunday", values[6]);
+        }
 
-
+        public void setUserName(string name,string gmail)
+        {
+            this.user_name.Text = name;
+            this.user_gmail_Label.Text = gmail;
+            this.username_2.Text = name;
+            this.user_gmail.Text = gmail;
         }
 
         private void chart1_Click(object sender, EventArgs e)
@@ -56,6 +75,11 @@ namespace Flex_Trainer
         private void card_workout_goals3_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void user_home_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -74,6 +74,30 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin_home.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="admin_home.Designer.cs">
+      <DependentUpon>admin_home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin_requests.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="admin_requests.Designer.cs">
+      <DependentUpon>admin_requests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="coman_addworkout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="coman_addworkout.Designer.cs">
+      <DependentUpon>coman_addworkout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="coman_create_diet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="coman_create_diet.Designer.cs">
+      <DependentUpon>coman_create_diet.cs</DependentUpon>
+    </Compile>
     <Compile Include="componets\card_workout_goals.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -92,35 +116,60 @@
     <Compile Include="componets\card_diet_plan.Designer.cs">
       <DependentUpon>card_diet_plan.cs</DependentUpon>
     </Compile>
-    <Compile Include="gym_member.cs">
+    <Compile Include="componets\gym_member.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="gym_member.Designer.cs">
+    <Compile Include="componets\gym_member.Designer.cs">
       <DependentUpon>gym_member.cs</DependentUpon>
     </Compile>
-    <Compile Include="gym_owner.cs">
+    <Compile Include="coman_create_workout.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="gym_owner.Designer.cs">
-      <DependentUpon>gym_owner.cs</DependentUpon>
+    <Compile Include="coman_create_workout.Designer.cs">
+      <DependentUpon>coman_create_workout.cs</DependentUpon>
     </Compile>
-    <Compile Include="gym_requests.cs">
+    <Compile Include="page_admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page_admin.Designer.cs">
+      <DependentUpon>page_admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page_gym_owner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page_gym_owner.Designer.cs">
+      <DependentUpon>page_gym_owner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="componets\gym_requests.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="gym_requests.Designer.cs">
+    <Compile Include="componets\gym_requests.Designer.cs">
       <DependentUpon>gym_requests.cs</DependentUpon>
     </Compile>
-    <Compile Include="gym_trainer.cs">
+    <Compile Include="componets\gym_trainer.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="gym_trainer.Designer.cs">
+    <Compile Include="componets\gym_trainer.Designer.cs">
       <DependentUpon>gym_trainer.cs</DependentUpon>
     </Compile>
-    <Compile Include="trainer_page2.cs">
+    <Compile Include="signup_owner.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="trainer_page2.Designer.cs">
-      <DependentUpon>trainer_page2.cs</DependentUpon>
+    <Compile Include="signup_owner.Designer.cs">
+      <DependentUpon>signup_owner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="signup_trainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="signup_trainer.Designer.cs">
+      <DependentUpon>signup_trainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SQL.cs" />
+    <Compile Include="page_trainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page_trainer.Designer.cs">
+      <DependentUpon>page_trainer.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -128,11 +177,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="signup.cs">
+    <Compile Include="signup_member.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="signup.Designer.cs">
-      <DependentUpon>signup.cs</DependentUpon>
+    <Compile Include="signup_member.Designer.cs">
+      <DependentUpon>signup_member.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -142,17 +191,17 @@
     <Compile Include="componets\trainer_home.Designer.cs">
       <DependentUpon>trainer_home.cs</DependentUpon>
     </Compile>
-    <Compile Include="componets\trainer_workout.cs">
+    <Compile Include="componets\coman_workout.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="componets\trainer_workout.Designer.cs">
-      <DependentUpon>trainer_workout.cs</DependentUpon>
+    <Compile Include="componets\coman_workout.Designer.cs">
+      <DependentUpon>coman_workout.cs</DependentUpon>
     </Compile>
-    <Compile Include="componets\traner_diet.cs">
+    <Compile Include="componets\coman_diet.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="componets\traner_diet.Designer.cs">
-      <DependentUpon>traner_diet.cs</DependentUpon>
+    <Compile Include="componets\coman_diet.Designer.cs">
+      <DependentUpon>coman_diet.cs</DependentUpon>
     </Compile>
     <Compile Include="componets\traner_feedback.cs">
       <SubType>UserControl</SubType>
@@ -172,24 +221,30 @@
     <Compile Include="componets\card_deit.Designer.cs">
       <DependentUpon>card_deit.cs</DependentUpon>
     </Compile>
-    <Compile Include="user_page.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="user_page.Designer.cs">
-      <DependentUpon>user_page.cs</DependentUpon>
-    </Compile>
     <Compile Include="componets\card_workout.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="componets\card_workout.Designer.cs">
       <DependentUpon>card_workout.cs</DependentUpon>
     </Compile>
-    <Compile Include="user_page2.cs">
+    <Compile Include="page_user.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="user_page2.Designer.cs">
-      <DependentUpon>user_page2.cs</DependentUpon>
+    <Compile Include="page_user.Designer.cs">
+      <DependentUpon>page_user.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="admin_home.resx">
+      <DependentUpon>admin_home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin_requests.resx">
+      <DependentUpon>admin_requests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="coman_addworkout.resx">
+      <DependentUpon>coman_addworkout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="coman_create_diet.resx">
+      <DependentUpon>coman_create_diet.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="componets\card_deit.resx">
       <DependentUpon>card_deit.cs</DependentUpon>
     </EmbeddedResource>
@@ -205,23 +260,35 @@
     <EmbeddedResource Include="componets\traner_feedback.resx">
       <DependentUpon>traner_feedback.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="gym_member.resx">
+    <EmbeddedResource Include="componets\gym_member.resx">
       <DependentUpon>gym_member.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="gym_owner.resx">
-      <DependentUpon>gym_owner.cs</DependentUpon>
+    <EmbeddedResource Include="coman_create_workout.resx">
+      <DependentUpon>coman_create_workout.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="gym_requests.resx">
+    <EmbeddedResource Include="page_admin.resx">
+      <DependentUpon>page_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page_gym_owner.resx">
+      <DependentUpon>page_gym_owner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="componets\gym_requests.resx">
       <DependentUpon>gym_requests.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="gym_trainer.resx">
+    <EmbeddedResource Include="componets\gym_trainer.resx">
       <DependentUpon>gym_trainer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="signup.resx">
-      <DependentUpon>signup.cs</DependentUpon>
+    <EmbeddedResource Include="signup_member.resx">
+      <DependentUpon>signup_member.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="trainer_page2.resx">
-      <DependentUpon>trainer_page2.cs</DependentUpon>
+    <EmbeddedResource Include="signup_owner.resx">
+      <DependentUpon>signup_owner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="signup_trainer.resx">
+      <DependentUpon>signup_trainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page_trainer.resx">
+      <DependentUpon>page_trainer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -238,23 +305,20 @@
     <EmbeddedResource Include="componets\trainer_home.resx">
       <DependentUpon>trainer_home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="componets\trainer_workout.resx">
-      <DependentUpon>trainer_workout.cs</DependentUpon>
+    <EmbeddedResource Include="componets\coman_workout.resx">
+      <DependentUpon>coman_workout.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="componets\traner_diet.resx">
-      <DependentUpon>traner_diet.cs</DependentUpon>
+    <EmbeddedResource Include="componets\coman_diet.resx">
+      <DependentUpon>coman_diet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="componets\user_home.resx">
       <DependentUpon>user_home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="user_page.resx">
-      <DependentUpon>user_page.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="componets\card_workout.resx">
       <DependentUpon>card_workout.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="user_page2.resx">
-      <DependentUpon>user_page2.cs</DependentUpon>
+    <EmbeddedResource Include="page_user.resx">
+      <DependentUpon>page_user.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
