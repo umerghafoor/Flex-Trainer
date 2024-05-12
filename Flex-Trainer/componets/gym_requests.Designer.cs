@@ -41,8 +41,8 @@
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name_table = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email_table = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Workout = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.deit_table = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.type_usr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.guna2GradientPanel4.SuspendLayout();
@@ -80,6 +80,7 @@
             this.guna2Button3.TabIndex = 22;
             this.guna2Button3.Text = "Remove";
             this.guna2Button3.UseTransparentBackground = true;
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // guna2Button1
             // 
@@ -164,6 +165,8 @@
             // 
             // guna2DataGridView1
             // 
+            this.guna2DataGridView1.AllowUserToAddRows = false;
+            this.guna2DataGridView1.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(188)))), ((int)(((byte)(255)))));
@@ -181,8 +184,8 @@
             this.id,
             this.name_table,
             this.email_table,
-            this.Workout,
-            this.deit_table});
+            this.Gender,
+            this.type_usr});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -195,6 +198,7 @@
             this.guna2DataGridView1.GridColor = System.Drawing.Color.White;
             this.guna2DataGridView1.Location = new System.Drawing.Point(0, 41);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
+            this.guna2DataGridView1.ReadOnly = true;
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 62;
             this.guna2DataGridView1.RowTemplate.Height = 28;
@@ -213,7 +217,7 @@
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 21;
-            this.guna2DataGridView1.ThemeStyle.ReadOnly = false;
+            this.guna2DataGridView1.ThemeStyle.ReadOnly = true;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -221,36 +225,42 @@
             this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 28;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.guna2DataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellContentClick);
             // 
             // id
             // 
             this.id.HeaderText = "id";
             this.id.MinimumWidth = 8;
             this.id.Name = "id";
+            this.id.ReadOnly = true;
             // 
             // name_table
             // 
             this.name_table.HeaderText = "Name";
             this.name_table.MinimumWidth = 8;
             this.name_table.Name = "name_table";
+            this.name_table.ReadOnly = true;
             // 
             // email_table
             // 
             this.email_table.HeaderText = "email";
             this.email_table.MinimumWidth = 8;
             this.email_table.Name = "email_table";
+            this.email_table.ReadOnly = true;
             // 
-            // Workout
+            // Gender
             // 
-            this.Workout.HeaderText = "Workout Plan";
-            this.Workout.MinimumWidth = 8;
-            this.Workout.Name = "Workout";
+            this.Gender.HeaderText = "Gender";
+            this.Gender.MinimumWidth = 8;
+            this.Gender.Name = "Gender";
+            this.Gender.ReadOnly = true;
             // 
-            // deit_table
+            // type_usr
             // 
-            this.deit_table.HeaderText = "Deit Plan";
-            this.deit_table.MinimumWidth = 8;
-            this.deit_table.Name = "deit_table";
+            this.type_usr.HeaderText = "Type";
+            this.type_usr.MinimumWidth = 8;
+            this.type_usr.Name = "type_usr";
+            this.type_usr.ReadOnly = true;
             // 
             // label3
             // 
@@ -291,12 +301,12 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel4;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
+        private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn name_table;
         private System.Windows.Forms.DataGridViewTextBoxColumn email_table;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Workout;
-        private System.Windows.Forms.DataGridViewTextBoxColumn deit_table;
-        private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Gender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn type_usr;
     }
 }

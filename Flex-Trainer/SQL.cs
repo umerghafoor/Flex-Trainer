@@ -54,6 +54,23 @@ namespace Flex_Trainer
             }
 
         }
+        internal void ExecuteQuery(string v)
+        {
+            try
+            {
+                OpenConnection();
+                SqlCommand cmd = new SqlCommand(v, connection);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                CloseConnection();
+            }
+        }
 
     }
 }

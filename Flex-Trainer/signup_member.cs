@@ -15,6 +15,7 @@ namespace Flex_Trainer
     {
         signin parent;
         private SQL sql = new SQL();
+        List<Gym> gyms = new List<Gym>();
         public signup_member(signin parent)
         {
             InitializeComponent();
@@ -54,12 +55,18 @@ namespace Flex_Trainer
                 MessageBox.Show("Password must be filled out");
                 return;
             }
+            if (joinGymComboBox1 == null)
+            {
+                MessageBox.Show("Please select a gym");
+                return;
+            }
 
 
             if (password1_TextBox.Text == password2_TextBox.Text)
             {
                 // EXEC CreateMemberRegistrationRequest '11111111111', 'M', 'test@gmail.com', 'John', 'Doe', 5, 70, 'password123'
-                string query = "EXEC CreateMemberRegistrationRequest '" + ssnTextBox1.Text + "', '" + GenderComboBox.Text + "', '" + gmail_TextBox.Text + "', '" + Fname_TextBox.Text + "', '" + Lname_TextBox.Text + "', " + height.Value + ", " + weight.Value + ", '" + password1_TextBox.Text + "'";
+                string idSelected = gyms[joinGymComboBox1.SelectedIndex].gym_id;
+                string query = "EXEC CreateMemberRegistrationRequest '" + ssnTextBox1.Text + "', '" + GenderComboBox.Text + "', '" + gmail_TextBox.Text + "', '" + Fname_TextBox.Text + "', '" + Lname_TextBox.Text + "', " + height.Value + ", " + weight.Value + ", '" + password1_TextBox.Text + "','" + idSelected + "'";
                 DataTable dt = sql.GetDataTable(query);
                 // if dt[0][0] == 1
                 if (dt.Rows[0][0].ToString() == "1")
@@ -77,9 +84,6 @@ namespace Flex_Trainer
             }
         }
 
-        
-
-    
 
         private void label4_Click(object sender, EventArgs e)
         {
@@ -90,6 +94,13 @@ namespace Flex_Trainer
         {
             // set close event
             this.FormClosing += new FormClosingEventHandler(signup_FormClosing);
+            // joinGymComboBox1
+            DataTable dt = sql.GetDataTable("SELECT * FROM Gym");
+            foreach (DataRow row in dt.Rows)
+            {
+                gyms.Add(new Gym(row["GYM_SSN"].ToString(), row["Name"].ToString()));
+                joinGymComboBox1.Items.Add(row["Name"]);
+            }
         }
 
         private void signup_FormClosing(object sender, FormClosingEventArgs e)

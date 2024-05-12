@@ -132,6 +132,7 @@
             this.logout_Button.TabIndex = 16;
             this.logout_Button.Text = "Logout";
             this.logout_Button.UseTransparentBackground = true;
+            this.logout_Button.Click += new System.EventHandler(this.logout_Button_Click);
             // 
             // guna2Button3
             // 

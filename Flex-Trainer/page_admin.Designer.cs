@@ -73,6 +73,7 @@
             this.logout_Button.TabIndex = 15;
             this.logout_Button.Text = "Logout";
             this.logout_Button.UseTransparentBackground = true;
+            this.logout_Button.Click += new System.EventHandler(this.logout_Button_Click);
             // 
             // guna2Button4
             // 
@@ -131,8 +132,9 @@
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(180, 59);
             this.guna2Button2.TabIndex = 1;
-            this.guna2Button2.Text = "Workout";
+            this.guna2Button2.Text = "All Gyms";
             this.guna2Button2.UseTransparentBackground = true;
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // guna2Button1
             // 
@@ -152,8 +154,9 @@
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(180, 58);
             this.guna2Button1.TabIndex = 0;
-            this.guna2Button1.Text = "Home";
+            this.guna2Button1.Text = "Requests";
             this.guna2Button1.UseTransparentBackground = true;
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // admin_requests1
             // 
@@ -161,6 +164,7 @@
             this.admin_requests1.Name = "admin_requests1";
             this.admin_requests1.Size = new System.Drawing.Size(1260, 890);
             this.admin_requests1.TabIndex = 3;
+            this.admin_requests1.Load += new System.EventHandler(this.admin_requests1_Load);
             // 
             // admin_home1
             // 
@@ -179,6 +183,7 @@
             this.Controls.Add(this.guna2Panel1);
             this.Name = "page_admin";
             this.Text = "page_admin";
+            this.Load += new System.EventHandler(this.page_admin_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

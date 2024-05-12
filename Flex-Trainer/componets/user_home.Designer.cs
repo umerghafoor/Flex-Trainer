@@ -28,17 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.guna2GradientPanel5 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2CircleProgressBar1 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.label4 = new System.Windows.Forms.Label();
             this.user_gmail = new System.Windows.Forms.Label();
             this.username_2 = new System.Windows.Forms.Label();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2ToggleSwitch1 = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.user_gmail_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.user_name = new System.Windows.Forms.Label();
@@ -48,16 +46,10 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.card_workout_goals1 = new Flex_Trainer.card_workout_goals();
-            this.card_workout_goals2 = new Flex_Trainer.card_workout_goals();
+            this.weekly_flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2GradientPanel4 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.card_deit1 = new Flex_Trainer.card_deit();
-            this.card_deit2 = new Flex_Trainer.card_deit();
-            this.card_deit3 = new Flex_Trainer.card_deit();
-            this.card_deit4 = new Flex_Trainer.card_deit();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2GradientPanel6 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -67,9 +59,7 @@
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2GradientPanel3.SuspendLayout();
             this.guna2GradientPanel2.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             this.guna2GradientPanel4.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
             this.guna2GradientPanel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
@@ -146,8 +136,6 @@
             // 
             // guna2GradientPanel1
             // 
-            this.guna2GradientPanel1.Controls.Add(this.guna2HtmlLabel2);
-            this.guna2GradientPanel1.Controls.Add(this.guna2ToggleSwitch1);
             this.guna2GradientPanel1.Controls.Add(this.user_gmail_Label);
             this.guna2GradientPanel1.Controls.Add(this.guna2Button2);
             this.guna2GradientPanel1.Controls.Add(this.user_name);
@@ -157,31 +145,6 @@
             this.guna2GradientPanel1.Size = new System.Drawing.Size(1260, 104);
             this.guna2GradientPanel1.TabIndex = 9;
             this.guna2GradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel1_Paint);
-            // 
-            // guna2HtmlLabel2
-            // 
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(933, 40);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(66, 22);
-            this.guna2HtmlLabel2.TabIndex = 5;
-            this.guna2HtmlLabel2.Text = "Availbility";
-            // 
-            // guna2ToggleSwitch1
-            // 
-            this.guna2ToggleSwitch1.Checked = true;
-            this.guna2ToggleSwitch1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ToggleSwitch1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ToggleSwitch1.CheckedState.InnerBorderColor = System.Drawing.Color.White;
-            this.guna2ToggleSwitch1.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.guna2ToggleSwitch1.Location = new System.Drawing.Point(1020, 33);
-            this.guna2ToggleSwitch1.Name = "guna2ToggleSwitch1";
-            this.guna2ToggleSwitch1.Size = new System.Drawing.Size(68, 37);
-            this.guna2ToggleSwitch1.TabIndex = 4;
-            this.guna2ToggleSwitch1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2ToggleSwitch1.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2ToggleSwitch1.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
-            this.guna2ToggleSwitch1.UncheckedState.InnerColor = System.Drawing.Color.White;
             // 
             // user_gmail_Label
             // 
@@ -194,22 +157,24 @@
             // 
             // guna2Button2
             // 
+            this.guna2Button2.AutoRoundedCorners = true;
             this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.BorderRadius = 12;
+            this.guna2Button2.BorderRadius = 31;
             this.guna2Button2.CheckedState.FillColor = System.Drawing.Color.White;
             this.guna2Button2.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button2.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(1105, 28);
+            this.guna2Button2.Location = new System.Drawing.Point(986, 28);
             this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(136, 45);
+            this.guna2Button2.Size = new System.Drawing.Size(255, 64);
             this.guna2Button2.TabIndex = 2;
-            this.guna2Button2.Text = "Notification";
+            this.guna2Button2.Text = "Book Apointment";
             this.guna2Button2.UseTransparentBackground = true;
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // user_name
             // 
@@ -291,7 +256,7 @@
             this.guna2GradientPanel2.BorderColor = System.Drawing.Color.Transparent;
             this.guna2GradientPanel2.BorderRadius = 12;
             this.guna2GradientPanel2.BorderThickness = 4;
-            this.guna2GradientPanel2.Controls.Add(this.flowLayoutPanel1);
+            this.guna2GradientPanel2.Controls.Add(this.weekly_flowLayoutPanel1);
             this.guna2GradientPanel2.Controls.Add(this.label3);
             this.guna2GradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(188)))), ((int)(((byte)(255)))));
             this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(188)))), ((int)(((byte)(255)))));
@@ -301,32 +266,15 @@
             this.guna2GradientPanel2.Size = new System.Drawing.Size(586, 401);
             this.guna2GradientPanel2.TabIndex = 9;
             // 
-            // flowLayoutPanel1
+            // weekly_flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(188)))), ((int)(((byte)(255)))));
-            this.flowLayoutPanel1.Controls.Add(this.card_workout_goals1);
-            this.flowLayoutPanel1.Controls.Add(this.card_workout_goals2);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 41);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(586, 360);
-            this.flowLayoutPanel1.TabIndex = 16;
-            // 
-            // card_workout_goals1
-            // 
-            this.card_workout_goals1.Location = new System.Drawing.Point(3, 3);
-            this.card_workout_goals1.Name = "card_workout_goals1";
-            this.card_workout_goals1.Size = new System.Drawing.Size(571, 111);
-            this.card_workout_goals1.TabIndex = 0;
-            this.card_workout_goals1.Load += new System.EventHandler(this.card_workout_goals1_Load);
-            // 
-            // card_workout_goals2
-            // 
-            this.card_workout_goals2.Location = new System.Drawing.Point(3, 120);
-            this.card_workout_goals2.Name = "card_workout_goals2";
-            this.card_workout_goals2.Size = new System.Drawing.Size(571, 111);
-            this.card_workout_goals2.TabIndex = 1;
+            this.weekly_flowLayoutPanel1.AutoScroll = true;
+            this.weekly_flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(188)))), ((int)(((byte)(255)))));
+            this.weekly_flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.weekly_flowLayoutPanel1.Location = new System.Drawing.Point(0, 41);
+            this.weekly_flowLayoutPanel1.Name = "weekly_flowLayoutPanel1";
+            this.weekly_flowLayoutPanel1.Size = new System.Drawing.Size(586, 360);
+            this.weekly_flowLayoutPanel1.TabIndex = 16;
             // 
             // label3
             // 
@@ -362,43 +310,11 @@
             // 
             this.flowLayoutPanel2.AutoScroll = true;
             this.flowLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(188)))), ((int)(((byte)(255)))));
-            this.flowLayoutPanel2.Controls.Add(this.card_deit1);
-            this.flowLayoutPanel2.Controls.Add(this.card_deit2);
-            this.flowLayoutPanel2.Controls.Add(this.card_deit3);
-            this.flowLayoutPanel2.Controls.Add(this.card_deit4);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 41);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(622, 360);
             this.flowLayoutPanel2.TabIndex = 17;
-            // 
-            // card_deit1
-            // 
-            this.card_deit1.Location = new System.Drawing.Point(3, 3);
-            this.card_deit1.Name = "card_deit1";
-            this.card_deit1.Size = new System.Drawing.Size(577, 77);
-            this.card_deit1.TabIndex = 0;
-            // 
-            // card_deit2
-            // 
-            this.card_deit2.Location = new System.Drawing.Point(3, 86);
-            this.card_deit2.Name = "card_deit2";
-            this.card_deit2.Size = new System.Drawing.Size(577, 77);
-            this.card_deit2.TabIndex = 1;
-            // 
-            // card_deit3
-            // 
-            this.card_deit3.Location = new System.Drawing.Point(3, 169);
-            this.card_deit3.Name = "card_deit3";
-            this.card_deit3.Size = new System.Drawing.Size(577, 77);
-            this.card_deit3.TabIndex = 2;
-            // 
-            // card_deit4
-            // 
-            this.card_deit4.Location = new System.Drawing.Point(3, 252);
-            this.card_deit4.Name = "card_deit4";
-            this.card_deit4.Size = new System.Drawing.Size(577, 77);
-            this.card_deit4.TabIndex = 3;
             // 
             // label2
             // 
@@ -410,9 +326,9 @@
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(12, 12, 0, 0);
-            this.label2.Size = new System.Drawing.Size(216, 41);
+            this.label2.Size = new System.Drawing.Size(203, 41);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Today dient plan";
+            this.label2.Text = "Today Diet plan";
             // 
             // guna2GradientPanel6
             // 
@@ -436,16 +352,16 @@
             this.chart1.BackColor = System.Drawing.Color.Transparent;
             this.chart1.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
             this.chart1.BorderlineWidth = 0;
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(8, 44);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(725, 300);
             this.chart1.TabIndex = 4;
             this.chart1.Text = "chart1";
@@ -488,10 +404,8 @@
             this.guna2GradientPanel3.PerformLayout();
             this.guna2GradientPanel2.ResumeLayout(false);
             this.guna2GradientPanel2.PerformLayout();
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.guna2GradientPanel4.ResumeLayout(false);
             this.guna2GradientPanel4.PerformLayout();
-            this.flowLayoutPanel2.ResumeLayout(false);
             this.guna2GradientPanel6.ResumeLayout(false);
             this.guna2GradientPanel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
@@ -505,8 +419,6 @@
         private System.Windows.Forms.Label user_gmail;
         private System.Windows.Forms.Label username_2;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private Guna.UI2.WinForms.Guna2ToggleSwitch guna2ToggleSwitch1;
         private Guna.UI2.WinForms.Guna2HtmlLabel user_gmail_Label;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private System.Windows.Forms.Label user_name;
@@ -524,13 +436,7 @@
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private card_workout_goals card_workout_goals1;
-        private card_workout_goals card_workout_goals2;
+        private System.Windows.Forms.FlowLayoutPanel weekly_flowLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private card_deit card_deit1;
-        private card_deit card_deit2;
-        private card_deit card_deit3;
-        private card_deit card_deit4;
     }
 }

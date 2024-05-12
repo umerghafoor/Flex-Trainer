@@ -28,6 +28,7 @@ namespace Flex_Trainer
             InitializeComponent();
             this.trainer_workout1.setUser(id,UserType.Member);
             this.traner_diet1.setuser(id,UserType.Member);
+            this.userControl11.setvalues(id);
             this.traner_feedback1.Visible = false;
             this.trainer_workout1.Visible = false;
             this.traner_diet1.Visible = false;

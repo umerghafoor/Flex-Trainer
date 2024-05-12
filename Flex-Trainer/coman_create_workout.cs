@@ -124,7 +124,8 @@ namespace Flex_Trainer
             // remove selected row
             foreach (DataGridViewRow row in this.workoutGridView.SelectedRows)
             {
-                this.workoutGridView.Rows.Remove(row);
+                if(!row.IsNewRow)
+                    this.workoutGridView.Rows.Remove(row);
             }
         }
 

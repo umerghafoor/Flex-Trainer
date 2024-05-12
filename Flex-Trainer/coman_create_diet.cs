@@ -57,10 +57,13 @@ namespace Flex_Trainer
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+            // fix 'Uncommitted new row cannot be deleted.'
+            
             //remove selected from deitGridView
             if (this.deitGridView.SelectedRows.Count > 0)
             {
-                this.deitGridView.Rows.RemoveAt(this.deitGridView.SelectedRows[0].Index);
+                if (!this.deitGridView.SelectedRows[0].IsNewRow)
+                    this.deitGridView.Rows.RemoveAt(this.deitGridView.SelectedRows[0].Index);
             }
         }
 

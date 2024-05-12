@@ -12,11 +12,47 @@ namespace Flex_Trainer
 {
     public partial class page_admin : Form
     {
-        public page_admin()
+        signin sign = new signin();
+        public page_admin(signin sign)
         {
             InitializeComponent();
+            this.admin_requests1.Visible = true;
+            this.admin_home1.Visible = false;
+            this.sign = sign;
         }
 
-      
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            this.admin_requests1.Visible = true;
+            this.admin_home1.Visible = false;
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            this.admin_requests1.Visible = false;
+            this.admin_home1.Visible = true;
+        }
+
+        private void page_admin_Load(object sender, EventArgs e)
+        {
+            // set close event
+            this.FormClosed += new FormClosedEventHandler(Form1_FormClosed);
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            sign.Show();
+        }
+
+        private void logout_Button_Click(object sender, EventArgs e)
+        {
+            sign.Show();
+            this.Close();
+        }
+
+        private void admin_requests1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

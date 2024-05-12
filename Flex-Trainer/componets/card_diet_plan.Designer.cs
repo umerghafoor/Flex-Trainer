@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.day_time = new System.Windows.Forms.Label();
+            this.typeofdiet = new System.Windows.Forms.Label();
             this.cals = new System.Windows.Forms.Label();
             this.fats = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.Type_diet = new System.Windows.Forms.Label();
+            this.timofday = new System.Windows.Forms.Label();
             this.Diet_Name = new System.Windows.Forms.Label();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,12 +44,13 @@
             this.guna2GradientPanel3.BorderColor = System.Drawing.Color.Transparent;
             this.guna2GradientPanel3.BorderRadius = 20;
             this.guna2GradientPanel3.BorderThickness = 4;
-            this.guna2GradientPanel3.Controls.Add(this.day_time);
+            this.guna2GradientPanel3.Controls.Add(this.typeofdiet);
             this.guna2GradientPanel3.Controls.Add(this.cals);
             this.guna2GradientPanel3.Controls.Add(this.fats);
             this.guna2GradientPanel3.Controls.Add(this.label1);
-            this.guna2GradientPanel3.Controls.Add(this.Type_diet);
+            this.guna2GradientPanel3.Controls.Add(this.timofday);
             this.guna2GradientPanel3.Controls.Add(this.Diet_Name);
+            this.guna2GradientPanel3.Controls.Add(this.guna2Button1);
             this.guna2GradientPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2GradientPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2GradientPanel3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -59,17 +61,18 @@
             this.guna2GradientPanel3.TabIndex = 10;
             this.guna2GradientPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel3_Paint);
             // 
-            // day_time
+            // typeofdiet
             // 
-            this.day_time.AutoSize = true;
-            this.day_time.BackColor = System.Drawing.Color.Transparent;
-            this.day_time.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.day_time.ForeColor = System.Drawing.Color.White;
-            this.day_time.Location = new System.Drawing.Point(270, 152);
-            this.day_time.Name = "day_time";
-            this.day_time.Size = new System.Drawing.Size(110, 29);
-            this.day_time.TabIndex = 12;
-            this.day_time.Text = "Morning";
+            this.typeofdiet.AutoSize = true;
+            this.typeofdiet.BackColor = System.Drawing.Color.Transparent;
+            this.typeofdiet.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.typeofdiet.ForeColor = System.Drawing.Color.White;
+            this.typeofdiet.Location = new System.Drawing.Point(269, 152);
+            this.typeofdiet.Name = "typeofdiet";
+            this.typeofdiet.Size = new System.Drawing.Size(110, 29);
+            this.typeofdiet.TabIndex = 12;
+            this.typeofdiet.Text = "Morning";
+            this.typeofdiet.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // cals
             // 
@@ -107,17 +110,17 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Detials";
             // 
-            // Type_diet
+            // timofday
             // 
-            this.Type_diet.AutoSize = true;
-            this.Type_diet.BackColor = System.Drawing.Color.Transparent;
-            this.Type_diet.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Type_diet.ForeColor = System.Drawing.Color.White;
-            this.Type_diet.Location = new System.Drawing.Point(18, 72);
-            this.Type_diet.Name = "Type_diet";
-            this.Type_diet.Size = new System.Drawing.Size(37, 18);
-            this.Type_diet.TabIndex = 6;
-            this.Type_diet.Text = "type";
+            this.timofday.AutoSize = true;
+            this.timofday.BackColor = System.Drawing.Color.Transparent;
+            this.timofday.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timofday.ForeColor = System.Drawing.Color.White;
+            this.timofday.Location = new System.Drawing.Point(18, 72);
+            this.timofday.Name = "timofday";
+            this.timofday.Size = new System.Drawing.Size(37, 18);
+            this.timofday.TabIndex = 6;
+            this.timofday.Text = "type";
             // 
             // Diet_Name
             // 
@@ -130,6 +133,22 @@
             this.Diet_Name.Size = new System.Drawing.Size(174, 37);
             this.Diet_Name.TabIndex = 2;
             this.Diet_Name.Text = "Deit Name";
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BorderRadius = 20;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(412, 204);
+            this.guna2Button1.TabIndex = 14;
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // card_diet_plan
             // 
@@ -148,11 +167,12 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel3;
-        private System.Windows.Forms.Label day_time;
+        private System.Windows.Forms.Label typeofdiet;
         private System.Windows.Forms.Label cals;
         private System.Windows.Forms.Label fats;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label Type_diet;
+        private System.Windows.Forms.Label timofday;
         private System.Windows.Forms.Label Diet_Name;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

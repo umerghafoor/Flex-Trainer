@@ -12,6 +12,8 @@ namespace Flex_Trainer
 {
     public partial class user_home : UserControl
     {
+        SQL sql = new SQL();
+        private string userid;
         public user_home()
         {
             InitializeComponent();
@@ -24,8 +26,11 @@ namespace Flex_Trainer
             chart1.Series["Series1"].Points.AddXY("Friday", 50);
             chart1.Series["Series1"].Points.AddXY("Saturday", 60);
             chart1.Series["Series1"].Points.AddXY("Sunday", 70);
-            card_workout card = new card_workout();
-            this.flowLayoutPanel1.Controls.Add(card);
+        }
+
+        public void setvalues(string userid)
+        {
+            this.userid = userid;
         }
         public void setChartValue(int[] values)
         {
@@ -79,7 +84,34 @@ namespace Flex_Trainer
 
         private void user_home_Load(object sender, EventArgs e)
         {
+            // week workout goals
+            // SELECT * FROM GetExercisesInWorkoutPlan('11111111111', 'monday')
+            string today = DateTime.Now.DayOfWeek.ToString().ToLower();
+            DataTable dataTable = sql.GetDataTable("SELECT * FROM GetExercisesInWorkoutPlan('" + userid + "', '" + today + "')");
+            foreach (DataRow row in dataTable.Rows)
+            {
+                card_workout_goals card = new card_workout_goals();
+                string total_sets = "Total Reps " + row["Reps"].ToString();
+                card.setValues(row["Exercise_Name"].ToString(), total_sets, row["Sets"].ToString(), 0);
+                this.weekly_flowLayoutPanel1.Controls.Add(card);
+            }
 
+            //weekly diet goals
+            // SELECT * FROM GetDietInDietPlan('11111111111', 'monday')
+            dataTable = sql.GetDataTable("SELECT * FROM GetDietInDietPlan('" + userid + "', '" + today + "')");
+            foreach (DataRow row in dataTable.Rows)
+            {
+                card_deit card = new card_deit();
+                card.setValues(row["Diet_Name"].ToString(), row["Quantity"].ToString(), row["Calories"].ToString(), row["Fats"].ToString(), row["Carbs"].ToString(), row["Proteins"].ToString());
+                this.flowLayoutPanel2.Controls.Add(card);
+            }
+
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            user_Book_Trainer user_Book_Trainer = new user_Book_Trainer(userid);
+            user_Book_Trainer.Show();
         }
     }
 }

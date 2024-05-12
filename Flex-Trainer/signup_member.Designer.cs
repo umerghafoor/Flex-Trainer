@@ -43,6 +43,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.joinGymComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -227,6 +228,7 @@
             this.guna2Panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Panel1.Controls.Add(this.joinGymComboBox1);
             this.guna2Panel1.Controls.Add(this.ssnTextBox1);
             this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Controls.Add(this.label4);
@@ -309,6 +311,24 @@
             this.guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // joinGymComboBox1
+            // 
+            this.joinGymComboBox1.AutoRoundedCorners = true;
+            this.joinGymComboBox1.BackColor = System.Drawing.Color.Transparent;
+            this.joinGymComboBox1.BorderRadius = 17;
+            this.joinGymComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.joinGymComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.joinGymComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.joinGymComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.joinGymComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.joinGymComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.joinGymComboBox1.ItemHeight = 30;
+            this.joinGymComboBox1.Location = new System.Drawing.Point(693, 56);
+            this.joinGymComboBox1.Name = "joinGymComboBox1";
+            this.joinGymComboBox1.Size = new System.Drawing.Size(140, 36);
+            this.joinGymComboBox1.StartIndex = 1;
+            this.joinGymComboBox1.TabIndex = 33;
+            // 
             // signup_member
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -343,5 +363,6 @@
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2ContextMenuStrip guna2ContextMenuStrip1;
         private Guna.UI2.WinForms.Guna2TextBox ssnTextBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox joinGymComboBox1;
     }
 }

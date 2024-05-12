@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.user_name = new System.Windows.Forms.Label();
+            this.fats_less_than = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.cals_less_than = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.privicy = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.filterTime = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.filterType = new Guna.UI2.WinForms.Guna2ComboBox();
             this.searchTextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.filterType = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.filterTime = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.privicy = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cals_less_than = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.fats_less_than = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.user_name = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cals_less_than)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fats_less_than)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cals_less_than)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -62,6 +62,141 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1236, 173);
             this.guna2Panel1.TabIndex = 17;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label1.Location = new System.Drawing.Point(582, 105);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(71, 29);
+            this.label1.TabIndex = 28;
+            this.label1.Text = "Cal <";
+            // 
+            // user_name
+            // 
+            this.user_name.AutoSize = true;
+            this.user_name.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.user_name.ForeColor = System.Drawing.Color.SteelBlue;
+            this.user_name.Location = new System.Drawing.Point(303, 105);
+            this.user_name.Name = "user_name";
+            this.user_name.Size = new System.Drawing.Size(83, 29);
+            this.user_name.TabIndex = 27;
+            this.user_name.Text = "Fats <";
+            // 
+            // fats_less_than
+            // 
+            this.fats_less_than.AutoRoundedCorners = true;
+            this.fats_less_than.BackColor = System.Drawing.Color.Transparent;
+            this.fats_less_than.BorderRadius = 29;
+            this.fats_less_than.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.fats_less_than.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.fats_less_than.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.fats_less_than.Location = new System.Drawing.Point(410, 88);
+            this.fats_less_than.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.fats_less_than.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.fats_less_than.Name = "fats_less_than";
+            this.fats_less_than.Size = new System.Drawing.Size(143, 60);
+            this.fats_less_than.TabIndex = 26;
+            this.fats_less_than.ValueChanged += new System.EventHandler(this.fats_less_than_ValueChanged);
+            // 
+            // cals_less_than
+            // 
+            this.cals_less_than.AutoRoundedCorners = true;
+            this.cals_less_than.BackColor = System.Drawing.Color.Transparent;
+            this.cals_less_than.BorderRadius = 29;
+            this.cals_less_than.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.cals_less_than.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cals_less_than.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.cals_less_than.Location = new System.Drawing.Point(665, 88);
+            this.cals_less_than.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cals_less_than.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.cals_less_than.Name = "cals_less_than";
+            this.cals_less_than.Size = new System.Drawing.Size(143, 60);
+            this.cals_less_than.TabIndex = 25;
+            this.cals_less_than.ValueChanged += new System.EventHandler(this.cals_less_than_ValueChanged);
+            // 
+            // privicy
+            // 
+            this.privicy.AutoRoundedCorners = true;
+            this.privicy.BackColor = System.Drawing.Color.Transparent;
+            this.privicy.BorderRadius = 17;
+            this.privicy.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.privicy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.privicy.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.privicy.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.privicy.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.privicy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.privicy.ItemHeight = 30;
+            this.privicy.Items.AddRange(new object[] {
+            "All",
+            "Public",
+            "Private"});
+            this.privicy.Location = new System.Drawing.Point(21, 98);
+            this.privicy.Name = "privicy";
+            this.privicy.Size = new System.Drawing.Size(143, 36);
+            this.privicy.StartIndex = 0;
+            this.privicy.TabIndex = 24;
+            this.privicy.SelectedIndexChanged += new System.EventHandler(this.privicy_SelectedIndexChanged);
+            // 
+            // filterTime
+            // 
+            this.filterTime.AutoRoundedCorners = true;
+            this.filterTime.BackColor = System.Drawing.Color.Transparent;
+            this.filterTime.BorderRadius = 17;
+            this.filterTime.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.filterTime.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.filterTime.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.filterTime.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.filterTime.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.filterTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.filterTime.ItemHeight = 30;
+            this.filterTime.Items.AddRange(new object[] {
+            "All"});
+            this.filterTime.Location = new System.Drawing.Point(646, 28);
+            this.filterTime.Name = "filterTime";
+            this.filterTime.Size = new System.Drawing.Size(162, 36);
+            this.filterTime.StartIndex = 0;
+            this.filterTime.TabIndex = 23;
+            this.filterTime.SelectedIndexChanged += new System.EventHandler(this.filterTime_SelectedIndexChanged);
+            // 
+            // filterType
+            // 
+            this.filterType.AutoRoundedCorners = true;
+            this.filterType.BackColor = System.Drawing.Color.Transparent;
+            this.filterType.BorderRadius = 17;
+            this.filterType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.filterType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.filterType.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.filterType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.filterType.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.filterType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.filterType.ItemHeight = 30;
+            this.filterType.Items.AddRange(new object[] {
+            "All"});
+            this.filterType.Location = new System.Drawing.Point(438, 28);
+            this.filterType.Name = "filterType";
+            this.filterType.Size = new System.Drawing.Size(202, 36);
+            this.filterType.StartIndex = 0;
+            this.filterType.TabIndex = 22;
+            this.filterType.SelectedIndexChanged += new System.EventHandler(this.filterType_SelectedIndexChanged);
             // 
             // searchTextBox1
             // 
@@ -134,141 +269,7 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1236, 693);
             this.flowLayoutPanel1.TabIndex = 18;
-            // 
-            // filterType
-            // 
-            this.filterType.AutoRoundedCorners = true;
-            this.filterType.BackColor = System.Drawing.Color.Transparent;
-            this.filterType.BorderRadius = 17;
-            this.filterType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.filterType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.filterType.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.filterType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.filterType.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.filterType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.filterType.ItemHeight = 30;
-            this.filterType.Items.AddRange(new object[] {
-            "All"});
-            this.filterType.Location = new System.Drawing.Point(438, 28);
-            this.filterType.Name = "filterType";
-            this.filterType.Size = new System.Drawing.Size(202, 36);
-            this.filterType.StartIndex = 0;
-            this.filterType.TabIndex = 22;
-            this.filterType.SelectedIndexChanged += new System.EventHandler(this.filterType_SelectedIndexChanged);
-            // 
-            // filterTime
-            // 
-            this.filterTime.AutoRoundedCorners = true;
-            this.filterTime.BackColor = System.Drawing.Color.Transparent;
-            this.filterTime.BorderRadius = 17;
-            this.filterTime.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.filterTime.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.filterTime.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.filterTime.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.filterTime.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.filterTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.filterTime.ItemHeight = 30;
-            this.filterTime.Items.AddRange(new object[] {
-            "All"});
-            this.filterTime.Location = new System.Drawing.Point(646, 28);
-            this.filterTime.Name = "filterTime";
-            this.filterTime.Size = new System.Drawing.Size(162, 36);
-            this.filterTime.StartIndex = 0;
-            this.filterTime.TabIndex = 23;
-            this.filterTime.SelectedIndexChanged += new System.EventHandler(this.filterTime_SelectedIndexChanged);
-            // 
-            // privicy
-            // 
-            this.privicy.AutoRoundedCorners = true;
-            this.privicy.BackColor = System.Drawing.Color.Transparent;
-            this.privicy.BorderRadius = 17;
-            this.privicy.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.privicy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.privicy.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.privicy.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.privicy.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.privicy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.privicy.ItemHeight = 30;
-            this.privicy.Items.AddRange(new object[] {
-            "All",
-            "Public",
-            "Private"});
-            this.privicy.Location = new System.Drawing.Point(21, 98);
-            this.privicy.Name = "privicy";
-            this.privicy.Size = new System.Drawing.Size(143, 36);
-            this.privicy.StartIndex = 0;
-            this.privicy.TabIndex = 24;
-            this.privicy.SelectedIndexChanged += new System.EventHandler(this.privicy_SelectedIndexChanged);
-            // 
-            // cals_less_than
-            // 
-            this.cals_less_than.AutoRoundedCorners = true;
-            this.cals_less_than.BackColor = System.Drawing.Color.Transparent;
-            this.cals_less_than.BorderRadius = 29;
-            this.cals_less_than.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.cals_less_than.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.cals_less_than.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.cals_less_than.Location = new System.Drawing.Point(665, 88);
-            this.cals_less_than.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cals_less_than.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.cals_less_than.Name = "cals_less_than";
-            this.cals_less_than.Size = new System.Drawing.Size(143, 60);
-            this.cals_less_than.TabIndex = 25;
-            this.cals_less_than.ValueChanged += new System.EventHandler(this.cals_less_than_ValueChanged);
-            // 
-            // fats_less_than
-            // 
-            this.fats_less_than.AutoRoundedCorners = true;
-            this.fats_less_than.BackColor = System.Drawing.Color.Transparent;
-            this.fats_less_than.BorderRadius = 29;
-            this.fats_less_than.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.fats_less_than.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.fats_less_than.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.fats_less_than.Location = new System.Drawing.Point(410, 88);
-            this.fats_less_than.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.fats_less_than.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.fats_less_than.Name = "fats_less_than";
-            this.fats_less_than.Size = new System.Drawing.Size(143, 60);
-            this.fats_less_than.TabIndex = 26;
-            this.fats_less_than.ValueChanged += new System.EventHandler(this.fats_less_than_ValueChanged);
-            // 
-            // user_name
-            // 
-            this.user_name.AutoSize = true;
-            this.user_name.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.user_name.ForeColor = System.Drawing.Color.SteelBlue;
-            this.user_name.Location = new System.Drawing.Point(303, 105);
-            this.user_name.Name = "user_name";
-            this.user_name.Size = new System.Drawing.Size(83, 29);
-            this.user_name.TabIndex = 27;
-            this.user_name.Text = "Fats <";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label1.Location = new System.Drawing.Point(582, 105);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 29);
-            this.label1.TabIndex = 28;
-            this.label1.Text = "Cal <";
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // coman_diet
             // 
@@ -282,8 +283,8 @@
             this.Load += new System.EventHandler(this.coman_diet_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cals_less_than)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fats_less_than)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cals_less_than)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -86,11 +86,21 @@
     <Compile Include="admin_requests.Designer.cs">
       <DependentUpon>admin_requests.cs</DependentUpon>
     </Compile>
-    <Compile Include="coman_addworkout.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="user_Book_Trainer.cs">
+      <SubType>Form</SubType>
     </Compile>
+    <Compile Include="user_Book_Trainer.Designer.cs">
+      <DependentUpon>user_Book_Trainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="coman_addworkout.cs" />
     <Compile Include="coman_addworkout.Designer.cs">
       <DependentUpon>coman_addworkout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="coman_add_to_week.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="coman_add_to_week.Designer.cs">
+      <DependentUpon>coman_add_to_week.cs</DependentUpon>
     </Compile>
     <Compile Include="coman_create_diet.cs">
       <SubType>Form</SubType>
@@ -151,6 +161,12 @@
     </Compile>
     <Compile Include="componets\gym_trainer.Designer.cs">
       <DependentUpon>gym_trainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="signup_gym.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="signup_gym.Designer.cs">
+      <DependentUpon>signup_gym.cs</DependentUpon>
     </Compile>
     <Compile Include="signup_owner.cs">
       <SubType>Form</SubType>
@@ -233,6 +249,12 @@
     <Compile Include="page_user.Designer.cs">
       <DependentUpon>page_user.cs</DependentUpon>
     </Compile>
+    <Compile Include="traner_set_availbilty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="traner_set_availbilty.Designer.cs">
+      <DependentUpon>traner_set_availbilty.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="admin_home.resx">
       <DependentUpon>admin_home.cs</DependentUpon>
     </EmbeddedResource>
@@ -241,6 +263,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="coman_addworkout.resx">
       <DependentUpon>coman_addworkout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="coman_add_to_week.resx">
+      <DependentUpon>coman_add_to_week.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="coman_create_diet.resx">
       <DependentUpon>coman_create_diet.cs</DependentUpon>
@@ -277,6 +302,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="componets\gym_trainer.resx">
       <DependentUpon>gym_trainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="signup_gym.resx">
+      <DependentUpon>signup_gym.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="signup_member.resx">
       <DependentUpon>signup_member.cs</DependentUpon>
@@ -319,6 +347,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="page_user.resx">
       <DependentUpon>page_user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="traner_set_availbilty.resx">
+      <DependentUpon>traner_set_availbilty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user_Book_Trainer.resx">
+      <DependentUpon>user_Book_Trainer.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

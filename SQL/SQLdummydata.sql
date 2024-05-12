@@ -1,26 +1,42 @@
 USE FlexTrainer2;
+
+
 SELECT * FROM Member;
 SELECT * FROM Trainer;
 SELECT * FROM Gym_Owner;
 SELECT * FROM Gym;
+SELECT * FROM Membership;
+
+SELECT * FROM Member_Registration;
+SELECT * FROM MemberjoinGym;
+
+
+SELECT * FROM Trainer_Registration;
+SELECT * FROM Gym_Owner_Registration;
+SELECT * FROM Gym_Registration;
 SELECT * FROM TrainerWorksGym;
 SELECT * FROM MemberTrainerSession;
 SELECT * FROM MemberFeedback;
 SELECT * FROM TrainerAvailability;
 SELECT * FROM TrainerSpecialty;
 SELECT * FROM TrainerQualification;
+SELECT * FROM TrainerRegistrationSpecialty;
+SELECT * FROM TrainerRegistrationQualification;
 SELECT * FROM GymApprovesTrainer;
 SELECT * FROM Admin;
-SELECT * FROM Diet;
 SELECT * FROM Equipment;
 SELECT * FROM GymUsesEquipment;
 SELECT * FROM Workout_Log;
 SELECT * FROM Diet_Log;
+
 SELECT * FROM Workout_Plan;
 SELECT * FROM WorkoutUsesEquipment;
+
 SELECT * FROM Diet_Plan;
+SELECT * FROM Diet;
 SELECT * FROM DietPlanUsesDiet;
-SELECT * FROM Membership;
+
+SELECT * FROM MemberHasGymMembership;
 SELECT * FROM WeeklyPlan;
 
 
@@ -192,7 +208,7 @@ VALUES
 ('88888888888', 'Monday', 8, 8),
 ('99999999999', 'Tuesday', 9, 9),
 ('10101010101', 'Wednesday', 10, 10);
-
+--------------------------------------------------------------------------------------------------------------------------------------
 -- Insert dummy data into TrainerWorksGym table
 INSERT INTO TrainerWorksGym (GYM_SSN, Trainer_SSN)
 VALUES 
@@ -248,7 +264,7 @@ VALUES
 (8, 'Workout 8', 0, 'Cardio', 'Chest', 30, NULL, 'T_004'),
 (9, 'Workout 9', 1, 'Strength', 'Arms', 75, '99999999999', NULL),
 (10, 'Workout 10', 0, 'Cardio', 'Back', 45, NULL, 'T_005');
-
+-------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Insert dummy data into Diet_Plan table
 INSERT INTO Diet_Plan (Diet_Plan_ID, Public_Flag, DietPlan_Name, Type_Diet_Plan, Time_Of_Day, Member_SSN, Trainer_SSN)
 VALUES 

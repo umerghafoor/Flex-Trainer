@@ -87,7 +87,7 @@ namespace Flex_Trainer
             // this.Hide();
             if (user_selecter.Text == "Admin")
             {
-                page_admin page_Admin = new page_admin();
+                page_admin page_Admin = new page_admin(this);
                 page_Admin.Show();
             }
             else if (user_selecter.Text == "User")
@@ -122,7 +122,7 @@ namespace Flex_Trainer
                     {
                         this.Hide();
                         string id = reader["Trainer_SSN"].ToString();
-                        page_trainer admin = new page_trainer(id);
+                        page_trainer admin = new page_trainer(id,this);
                         admin.Show();
                     }
                     else

@@ -12,13 +12,17 @@ namespace Flex_Trainer
 {
     public partial class card_workout : UserControl
     {
+        string workout_id;
+        string user_id;
         public card_workout()
         {
             InitializeComponent();
         }
 
-        public void setValues(string name, string targetmuscle, string time, string category, string[] execise, string[] reps,string[] sets)
+        public void setValues(string name, string targetmuscle, string time, string category, string[] execise, string[] reps,string[] sets,string workoutid,string userid)
         {
+            this.workout_id = workoutid;
+            this.user_id = userid;
             this.workouname.Text = name;
             this.target_muscle.Text = targetmuscle;
             this.time.Text = time;
@@ -56,12 +60,18 @@ namespace Flex_Trainer
 
         private void guna2GradientPanel3_Paint(object sender, PaintEventArgs e)
         {
-
+            
         }
 
         private void card_workout_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            coman_add_to_week coman = new coman_add_to_week(user_id, workout_id, "NULL");
+            coman.Show();
         }
     }
 }

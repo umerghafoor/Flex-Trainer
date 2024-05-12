@@ -38,6 +38,7 @@
             this.label19 = new System.Windows.Forms.Label();
             this.time = new System.Windows.Forms.Label();
             this.workouname = new System.Windows.Forms.Label();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,6 +56,7 @@
             this.guna2GradientPanel3.Controls.Add(this.label19);
             this.guna2GradientPanel3.Controls.Add(this.time);
             this.guna2GradientPanel3.Controls.Add(this.workouname);
+            this.guna2GradientPanel3.Controls.Add(this.guna2Button1);
             this.guna2GradientPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2GradientPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2GradientPanel3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -76,6 +78,7 @@
             this.catgory.Size = new System.Drawing.Size(112, 29);
             this.catgory.TabIndex = 12;
             this.catgory.Text = "catagory";
+            this.catgory.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // ex2
             // 
@@ -174,6 +177,22 @@
             this.workouname.TabIndex = 2;
             this.workouname.Text = "Workout Name";
             // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BorderRadius = 20;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(412, 204);
+            this.guna2Button1.TabIndex = 13;
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
             // card_workout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -200,5 +219,6 @@
         private System.Windows.Forms.Label ex3;
         private System.Windows.Forms.Label ex1;
         private System.Windows.Forms.Label catgory;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

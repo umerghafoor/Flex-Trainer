@@ -104,7 +104,7 @@ namespace Flex_Trainer
             foreach (var workout in workoutDictionary.Values)
             {
                 card = new card_workout();
-                card.setValues(workout.Name, workout.targetmuscle, workout.Time, workout.category, workout.Exercise, workout.Reps, workout.Sets);
+                card.setValues(workout.Name, workout.targetmuscle, workout.Time, workout.category, workout.Exercise, workout.Reps, workout.Sets,workout.Id,userid );
                 this.flowLayoutPanel1.Controls.Add(card);
             }
         }

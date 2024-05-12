@@ -51,7 +51,8 @@ namespace Flex_Trainer
 
         private void Submit_Button_Click(object sender, EventArgs e)
         {
-
+            signup_gym signup_Gym = new signup_gym(userid);
+            signup_Gym.Show();
         }
 
         private void allgymsComboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -60,6 +61,8 @@ namespace Flex_Trainer
             this.gym_trainer1.refresh();
             this.gym_member1.setuserid(gyms[allgymsComboBox1.SelectedIndex].gym_id);
             this.gym_member1.refresh();
+            this.gym_requests1.setuserid(gyms[allgymsComboBox1.SelectedIndex].gym_id);
+            this.gym_requests1.refresh();
         }
 
         private void page_gym_owner_Load(object sender, EventArgs e)
@@ -69,9 +72,7 @@ namespace Flex_Trainer
             // Insert names to the List
             foreach (DataRow row in dt.Rows)
             {
-                Gym gym = new Gym();
-                gym.gym_id = row["gym_ssn"].ToString();
-                gym.gym_name = row["gym_name"].ToString();
+                Gym gym = new Gym(row["gym_ssn"].ToString(), row["gym_name"].ToString());
                 gyms.Add(gym);
             }
             // Insert names to the combo box
@@ -79,6 +80,19 @@ namespace Flex_Trainer
             {
                 allgymsComboBox1.Items.Add(gym.gym_name);
             }
+            // set close event
+            this.FormClosing += new FormClosingEventHandler(this.page_gym_owner_FormClosing);
+        }
+
+        private void page_gym_owner_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            parent.Show();
+        }
+
+        private void logout_Button_Click(object sender, EventArgs e)
+        {
+            parent.Show();
+            this.Close();
         }
     }
 
@@ -86,5 +100,11 @@ namespace Flex_Trainer
     {
         public string gym_id;
         public string gym_name;
+
+        public Gym(string v1, string v2)
+        {
+            this.gym_id = v1;
+            this.gym_name = v2;
+        }
     }
 }

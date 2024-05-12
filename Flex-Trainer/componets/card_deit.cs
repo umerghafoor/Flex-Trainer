@@ -16,5 +16,17 @@ namespace Flex_Trainer
         {
             InitializeComponent();
         }
+
+        internal void setValues(string name, string Quantity, string Calories, string Fats, string Carbs, string Protein)
+        {
+            this.dietname.Text = name;
+            this.details.Text = "Fats: " + Fats + "g " + "Carbs: " + Carbs + "g \n" + "Protein: " + Protein + "g " + "Calories: " + Calories + "kcal";
+             this.diet_quantity.Text = Quantity;
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -81,7 +81,7 @@ namespace Flex_Trainer
             foreach (var dietPlan in dietPlanDictionary.Values)
             {
                 dietPlanCard = new card_diet_plan();
-                dietPlanCard.setValues(dietPlan.Name, dietPlan.Type, dietPlan.DayTime, dietPlan.TotalFats, dietPlan.TotalCals);
+                dietPlanCard.setValues(dietPlan.Name, dietPlan.Type, dietPlan.Id, dietPlan.TotalFats, dietPlan.TotalCals,dietPlan.Id,userid);
                 this.flowLayoutPanel1.Controls.Add(dietPlanCard);
             }
         }
@@ -181,6 +181,11 @@ namespace Flex_Trainer
         {
             coman_create_diet Create_Diet = new coman_create_diet(userid, usertype);
             Create_Diet.Show();
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

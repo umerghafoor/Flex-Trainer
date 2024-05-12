@@ -32,6 +32,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2ToggleSwitch1 = new Guna.UI2.WinForms.Guna2ToggleSwitch();
@@ -77,6 +80,15 @@
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2GradientPanel8 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.addavailability2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.availablityDataGridView2 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Starttime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Endtime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Duration = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label24 = new System.Windows.Forms.Label();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2GradientPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
@@ -86,6 +98,8 @@
             this.guna2GradientPanel7.SuspendLayout();
             this.guna2GradientPanel6.SuspendLayout();
             this.guna2GradientPanel3.SuspendLayout();
+            this.guna2GradientPanel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.availablityDataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
@@ -179,7 +193,7 @@
             this.guna2GradientPanel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2GradientPanel4.Location = new System.Drawing.Point(22, 472);
             this.guna2GradientPanel4.Name = "guna2GradientPanel4";
-            this.guna2GradientPanel4.Size = new System.Drawing.Size(1219, 396);
+            this.guna2GradientPanel4.Size = new System.Drawing.Size(642, 396);
             this.guna2GradientPanel4.TabIndex = 7;
             // 
             // guna2DataGridView1
@@ -218,7 +232,7 @@
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 62;
             this.guna2DataGridView1.RowTemplate.Height = 28;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(1219, 355);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(642, 355);
             this.guna2DataGridView1.TabIndex = 3;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -709,10 +723,173 @@
             this.guna2Button1.Text = "Search";
             this.guna2Button1.UseTransparentBackground = true;
             // 
+            // guna2GradientPanel8
+            // 
+            this.guna2GradientPanel8.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2GradientPanel8.BorderRadius = 12;
+            this.guna2GradientPanel8.BorderThickness = 4;
+            this.guna2GradientPanel8.Controls.Add(this.guna2Button3);
+            this.guna2GradientPanel8.Controls.Add(this.addavailability2Button3);
+            this.guna2GradientPanel8.Controls.Add(this.availablityDataGridView2);
+            this.guna2GradientPanel8.Controls.Add(this.label24);
+            this.guna2GradientPanel8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(188)))), ((int)(((byte)(255)))));
+            this.guna2GradientPanel8.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(188)))), ((int)(((byte)(255)))));
+            this.guna2GradientPanel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2GradientPanel8.Location = new System.Drawing.Point(671, 472);
+            this.guna2GradientPanel8.Name = "guna2GradientPanel8";
+            this.guna2GradientPanel8.Size = new System.Drawing.Size(559, 396);
+            this.guna2GradientPanel8.TabIndex = 13;
+            this.guna2GradientPanel8.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel8_Paint);
+            // 
+            // guna2Button3
+            // 
+            this.guna2Button3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button3.BorderRadius = 12;
+            this.guna2Button3.CheckedState.FillColor = System.Drawing.Color.White;
+            this.guna2Button3.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button3.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button3.ForeColor = System.Drawing.Color.White;
+            this.guna2Button3.Location = new System.Drawing.Point(306, 3);
+            this.guna2Button3.Name = "guna2Button3";
+            this.guna2Button3.Size = new System.Drawing.Size(122, 32);
+            this.guna2Button3.TabIndex = 14;
+            this.guna2Button3.Text = "Refresh";
+            this.guna2Button3.UseTransparentBackground = true;
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
+            // 
+            // addavailability2Button3
+            // 
+            this.addavailability2Button3.BackColor = System.Drawing.Color.Transparent;
+            this.addavailability2Button3.BorderRadius = 12;
+            this.addavailability2Button3.CheckedState.FillColor = System.Drawing.Color.White;
+            this.addavailability2Button3.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.addavailability2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.addavailability2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.addavailability2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.addavailability2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.addavailability2Button3.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addavailability2Button3.ForeColor = System.Drawing.Color.White;
+            this.addavailability2Button3.Location = new System.Drawing.Point(434, 3);
+            this.addavailability2Button3.Name = "addavailability2Button3";
+            this.addavailability2Button3.Size = new System.Drawing.Size(122, 32);
+            this.addavailability2Button3.TabIndex = 13;
+            this.addavailability2Button3.Text = "+";
+            this.addavailability2Button3.UseTransparentBackground = true;
+            this.addavailability2Button3.Click += new System.EventHandler(this.addavailability2Button3_Click);
+            // 
+            // availablityDataGridView2
+            // 
+            this.availablityDataGridView2.AllowUserToAddRows = false;
+            this.availablityDataGridView2.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.availablityDataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.availablityDataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(188)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(188)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.availablityDataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.availablityDataGridView2.ColumnHeadersHeight = 21;
+            this.availablityDataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.availablityDataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Date,
+            this.Starttime,
+            this.Endtime,
+            this.Duration});
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.availablityDataGridView2.DefaultCellStyle = dataGridViewCellStyle6;
+            this.availablityDataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.availablityDataGridView2.GridColor = System.Drawing.Color.White;
+            this.availablityDataGridView2.Location = new System.Drawing.Point(0, 41);
+            this.availablityDataGridView2.Name = "availablityDataGridView2";
+            this.availablityDataGridView2.ReadOnly = true;
+            this.availablityDataGridView2.RowHeadersVisible = false;
+            this.availablityDataGridView2.RowHeadersWidth = 62;
+            this.availablityDataGridView2.RowTemplate.Height = 28;
+            this.availablityDataGridView2.Size = new System.Drawing.Size(559, 355);
+            this.availablityDataGridView2.TabIndex = 3;
+            this.availablityDataGridView2.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.availablityDataGridView2.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.availablityDataGridView2.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.availablityDataGridView2.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.availablityDataGridView2.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.availablityDataGridView2.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(188)))), ((int)(((byte)(255)))));
+            this.availablityDataGridView2.ThemeStyle.GridColor = System.Drawing.Color.White;
+            this.availablityDataGridView2.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(188)))), ((int)(((byte)(255)))));
+            this.availablityDataGridView2.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.availablityDataGridView2.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold);
+            this.availablityDataGridView2.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.availablityDataGridView2.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.availablityDataGridView2.ThemeStyle.HeaderStyle.Height = 21;
+            this.availablityDataGridView2.ThemeStyle.ReadOnly = true;
+            this.availablityDataGridView2.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.availablityDataGridView2.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.availablityDataGridView2.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.availablityDataGridView2.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.availablityDataGridView2.ThemeStyle.RowsStyle.Height = 28;
+            this.availablityDataGridView2.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.availablityDataGridView2.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // Date
+            // 
+            this.Date.HeaderText = "Date";
+            this.Date.MinimumWidth = 8;
+            this.Date.Name = "Date";
+            this.Date.ReadOnly = true;
+            // 
+            // Starttime
+            // 
+            this.Starttime.HeaderText = "Starttime";
+            this.Starttime.MinimumWidth = 8;
+            this.Starttime.Name = "Starttime";
+            this.Starttime.ReadOnly = true;
+            // 
+            // Endtime
+            // 
+            this.Endtime.HeaderText = "Endtime";
+            this.Endtime.MinimumWidth = 8;
+            this.Endtime.Name = "Endtime";
+            this.Endtime.ReadOnly = true;
+            // 
+            // Duration
+            // 
+            this.Duration.HeaderText = "Duration";
+            this.Duration.MinimumWidth = 8;
+            this.Duration.Name = "Duration";
+            this.Duration.ReadOnly = true;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.Color.Transparent;
+            this.label24.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label24.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.label24.ForeColor = System.Drawing.Color.White;
+            this.label24.Location = new System.Drawing.Point(0, 0);
+            this.label24.Name = "label24";
+            this.label24.Padding = new System.Windows.Forms.Padding(12, 12, 0, 0);
+            this.label24.Size = new System.Drawing.Size(144, 41);
+            this.label24.TabIndex = 2;
+            this.label24.Text = "Availabilty";
+            // 
             // trainer_home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.guna2GradientPanel8);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.guna2TextBox1);
@@ -741,6 +918,9 @@
             this.guna2GradientPanel6.PerformLayout();
             this.guna2GradientPanel3.ResumeLayout(false);
             this.guna2GradientPanel3.PerformLayout();
+            this.guna2GradientPanel8.ResumeLayout(false);
+            this.guna2GradientPanel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.availablityDataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -793,5 +973,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn email_table;
         private System.Windows.Forms.DataGridViewTextBoxColumn Workout;
         private System.Windows.Forms.DataGridViewTextBoxColumn deit_table;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel8;
+        private Guna.UI2.WinForms.Guna2Button addavailability2Button3;
+        private Guna.UI2.WinForms.Guna2DataGridView availablityDataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Starttime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Endtime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Duration;
+        private System.Windows.Forms.Label label24;
+        private Guna.UI2.WinForms.Guna2Button guna2Button3;
     }
 }

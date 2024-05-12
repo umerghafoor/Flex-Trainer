@@ -14,14 +14,17 @@ namespace Flex_Trainer
     {
         private string id;
         SQL sql = new SQL();
-        public page_trainer(string id)
+        signin parent;
+        public page_trainer(string id,signin s)
         {
             InitializeComponent();
             this.trainer_home1.Visible = true;
             this.trainer_workout1.Visible = false;
             this.traner_diet1.Visible = false;
             this.traner_feedback1.Visible = false;
+            this.parent = s;
             this.id = id;
+            this.trainer_home1.setvalues(id);
             this.trainer_workout1.setUser(id, UserType.Trainer);
             this.traner_diet1.setuser(id, UserType.Trainer);
 
@@ -67,6 +70,12 @@ namespace Flex_Trainer
         {
             
 
+        }
+
+        private void logout_Button_Click(object sender, EventArgs e)
+        {
+            parent.Show();
+            this.Close();
         }
     }
 }

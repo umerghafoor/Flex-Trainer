@@ -24,7 +24,6 @@ CREATE TABLE Trainer (
 	YoE FLOAT
    );
 
-   
 CREATE TABLE Gym_Owner (
     GO_SSN VARCHAR(11) PRIMARY KEY,
     Gender VARCHAR(10),
@@ -42,19 +41,18 @@ CREATE TABLE Gym (
 	GO_SSN VARCHAR(11),
 	FOREIGN KEY (GO_SSN) REFERENCES Gym_Owner(GO_SSN)
 	);
-
-
-	CREATE TABLE Member_Registration (
+CREATE TABLE Member_Registration (
     Member_SSN VARCHAR(11) PRIMARY KEY,
-	  Gender VARCHAR(10),
+	Gender VARCHAR(10),
     Gmail VARCHAR(100),
     Password VARCHAR(50),
     First_Name VARCHAR(50),
     Last_Name VARCHAR(50),
     Height FLOAT,
     Weight FLOAT,
+    GYM_SSN VARCHAR(11),
+    FOREIGN KEY (GYM_SSN) REFERENCES Gym(GYM_SSN)
   );
-
   
 CREATE TABLE Trainer_Registration (
     Trainer_SSN VARCHAR(11) PRIMARY KEY,
@@ -63,10 +61,38 @@ CREATE TABLE Trainer_Registration (
     Password VARCHAR(50),
     First_Name VARCHAR(50),
     Last_Name VARCHAR(50),
-	YoE FLOAT
+	YoE FLOAT,
+    GYM_SSN VARCHAR(11),
+    FOREIGN KEY (GYM_SSN) REFERENCES Gym(GYM_SSN)
    );
 
-   
+------------------------------------- deprected ----------------------------------------------
+CREATE TABLE TrainerRegistrationSpecialty
+(
+   specialty varchar(500),
+    Trainer_SSN VARCHAR(11),
+	FOREIGN KEY (Trainer_SSN) REFERENCES Trainer_Registration(Trainer_SSN)
+
+);
+
+CREATE TABLE TrainerRegistrationQualification
+(
+   qualification varchar(500),
+    Trainer_SSN VARCHAR(11),
+	FOREIGN KEY (Trainer_SSN) REFERENCES Trainer_Registration(Trainer_SSN)
+
+);
+-----------------------------------------------------------------------------------------------
+
+CREATE TABLE MemberjoinGym
+(
+ GYM_SSN VARCHAR(11),
+  Member_SSN VARCHAR(11),
+ FOREIGN KEY (GYM_SSN) REFERENCES Gym(GYM_SSN),
+ FOREIGN KEY (Member_SSN) REFERENCES Member(Member_SSN)
+);
+
+
 CREATE TABLE Gym_Owner_Registration (
     GO_SSN VARCHAR(11) PRIMARY KEY,
     Gender VARCHAR(10),
@@ -116,15 +142,13 @@ CREATE TABLE MemberFeedback
  FOREIGN KEY (Member_SSN) REFERENCES Member(Member_SSN),
 FOREIGN KEY (Trainer_SSN) REFERENCES Trainer(Trainer_SSN)
 
-);
-
 CREATE TABLE TrainerAvailability
 (
-   date DATE,
-   time TIME,
+    date DATE,
+    start_time TIME,
+    end_time TIME,
     Trainer_SSN VARCHAR(11),
-	FOREIGN KEY (Trainer_SSN) REFERENCES Trainer(Trainer_SSN)
-
+    FOREIGN KEY (Trainer_SSN) REFERENCES Trainer(Trainer_SSN)
 );
 
 CREATE TABLE TrainerSpecialty
@@ -143,30 +167,6 @@ CREATE TABLE TrainerQualification
 
 );
 
-CREATE TABLE TrainerRegistrationSpecialty
-(
-   specialty varchar(500),
-    Trainer_SSN VARCHAR(11),
-	FOREIGN KEY (Trainer_SSN) REFERENCES Trainer_Registration(Trainer_SSN)
-
-);
-
-CREATE TABLE TrainerRegistrationQualification
-(
-   qualification varchar(500),
-    Trainer_SSN VARCHAR(11),
-	FOREIGN KEY (Trainer_SSN) REFERENCES Trainer_Registration(Trainer_SSN)
-
-);
-
-CREATE TABLE GymApprovesTrainer
-(
- Trainer_SSN VARCHAR(11),
-  GYM_SSN VARCHAR(11),
-  FOREIGN KEY (GYM_SSN) REFERENCES Gym(GYM_SSN),
-	FOREIGN KEY (Trainer_SSN) REFERENCES Trainer_Registration(Trainer_SSN)
-
-);
 
 CREATE TABLE Admin (
     SSN VARCHAR(11) PRIMARY KEY,
@@ -312,4 +312,14 @@ CREATE TABLE WeeklyPlan
 	 FOREIGN KEY (Diet_Plan_ID) REFERENCES Diet_Plan(Diet_Plan_ID),
    FOREIGN KEY (Workout_ID) REFERENCES Workout_Plan(Workout_ID),
    FOREIGN KEY (Member_SSN) REFERENCES Member(Member_SSN),
+);
+
+-- WeeklyPlan( Member_SSN, day, Workout_ID, Diet_Plan_ID)
+
+CREATE TABLE ChangeLog (
+    LogID INT PRIMARY KEY IDENTITY(1,1),
+    TableName VARCHAR(100),
+    ActionPerformed VARCHAR(10), -- INSERT, DELETE, etc.
+    ChangeDate DATETIME DEFAULT GETDATE(),
+    ChangedData NVARCHAR(MAX) -- JSON or XML representation of the changed data
 );
