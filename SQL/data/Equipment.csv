@@ -1,0 +1,31 @@
+Equipment_ID,Category,Name
+1,Cardio,Treadmill
+2,Cardio,Stationary Bike
+3,Strength,Dumbbells
+4,Strength,Barbell
+5,Cardio,Elliptical Trainer
+6,Strength,Kettlebell
+7,Cardio,Rowing Machine
+8,Strength,Resistance Bands
+9,Cardio,Jump Rope
+10,Strength,Weight Bench
+11,Cardio,Step Machine
+12,Strength,Medicine Ball
+13,Cardio,Spin Bike
+14,Strength,Pull-Up Bar
+15,Cardio,Stair Climber
+16,Strength,Leg Press Machine
+17,Cardio,Ski Machine
+18,Strength,Cable Machine
+19,Cardio,Punching Bag
+20,Strength,Smith Machine
+21,Cardio,Air Bike
+22,Strength,Hex Bar
+23,Cardio,Recumbent Bike
+24,Strength,Power Rack
+25,Cardio,Stepper
+26,Strength,Leg Curl Machine
+27,Cardio,Skating Machine
+28,Strength,Rowing Machine
+29,Cardio,Arm Bike
+30,Strength,Lat Pulldown Machine

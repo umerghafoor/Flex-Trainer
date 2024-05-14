@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.carbsNumericUpDown1 = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.protienNumericUpDown2 = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.user_name = new System.Windows.Forms.Label();
             this.fats_less_than = new Guna.UI2.WinForms.Guna2NumericUpDown();
@@ -38,15 +42,20 @@
             this.filterType = new Guna.UI2.WinForms.Guna2ComboBox();
             this.searchTextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.carbsNumericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protienNumericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fats_less_than)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cals_less_than)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Controls.Add(this.label2);
+            this.guna2Panel1.Controls.Add(this.label3);
+            this.guna2Panel1.Controls.Add(this.carbsNumericUpDown1);
+            this.guna2Panel1.Controls.Add(this.protienNumericUpDown2);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Controls.Add(this.user_name);
             this.guna2Panel1.Controls.Add(this.fats_less_than);
@@ -56,19 +65,88 @@
             this.guna2Panel1.Controls.Add(this.filterType);
             this.guna2Panel1.Controls.Add(this.searchTextBox1);
             this.guna2Panel1.Controls.Add(this.guna2Button1);
-            this.guna2Panel1.Controls.Add(this.guna2Button2);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(12, 12);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1236, 173);
             this.guna2Panel1.TabIndex = 17;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label2.Location = new System.Drawing.Point(258, 106);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(117, 29);
+            this.label2.TabIndex = 32;
+            this.label2.Text = "Protien <";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label3.Location = new System.Drawing.Point(17, 106);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(101, 29);
+            this.label3.TabIndex = 31;
+            this.label3.Text = "Carbs <";
+            // 
+            // carbsNumericUpDown1
+            // 
+            this.carbsNumericUpDown1.AutoRoundedCorners = true;
+            this.carbsNumericUpDown1.BackColor = System.Drawing.Color.Transparent;
+            this.carbsNumericUpDown1.BorderRadius = 29;
+            this.carbsNumericUpDown1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.carbsNumericUpDown1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.carbsNumericUpDown1.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.carbsNumericUpDown1.Location = new System.Drawing.Point(132, 90);
+            this.carbsNumericUpDown1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.carbsNumericUpDown1.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.carbsNumericUpDown1.Name = "carbsNumericUpDown1";
+            this.carbsNumericUpDown1.Size = new System.Drawing.Size(112, 60);
+            this.carbsNumericUpDown1.TabIndex = 30;
+            this.carbsNumericUpDown1.ValueChanged += new System.EventHandler(this.carbsNumericUpDown1_ValueChanged);
+            // 
+            // protienNumericUpDown2
+            // 
+            this.protienNumericUpDown2.AutoRoundedCorners = true;
+            this.protienNumericUpDown2.BackColor = System.Drawing.Color.Transparent;
+            this.protienNumericUpDown2.BorderRadius = 29;
+            this.protienNumericUpDown2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.protienNumericUpDown2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.protienNumericUpDown2.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.protienNumericUpDown2.Location = new System.Drawing.Point(389, 90);
+            this.protienNumericUpDown2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.protienNumericUpDown2.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.protienNumericUpDown2.Name = "protienNumericUpDown2";
+            this.protienNumericUpDown2.Size = new System.Drawing.Size(112, 60);
+            this.protienNumericUpDown2.TabIndex = 29;
+            this.protienNumericUpDown2.ValueChanged += new System.EventHandler(this.protienNumericUpDown2_ValueChanged);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label1.Location = new System.Drawing.Point(582, 105);
+            this.label1.Location = new System.Drawing.Point(738, 106);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 29);
             this.label1.TabIndex = 28;
@@ -79,7 +157,7 @@
             this.user_name.AutoSize = true;
             this.user_name.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.user_name.ForeColor = System.Drawing.Color.SteelBlue;
-            this.user_name.Location = new System.Drawing.Point(303, 105);
+            this.user_name.Location = new System.Drawing.Point(515, 106);
             this.user_name.Name = "user_name";
             this.user_name.Size = new System.Drawing.Size(83, 29);
             this.user_name.TabIndex = 27;
@@ -97,7 +175,7 @@
             0,
             0,
             0});
-            this.fats_less_than.Location = new System.Drawing.Point(410, 88);
+            this.fats_less_than.Location = new System.Drawing.Point(612, 90);
             this.fats_less_than.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.fats_less_than.Maximum = new decimal(new int[] {
             1000000,
@@ -105,7 +183,7 @@
             0,
             0});
             this.fats_less_than.Name = "fats_less_than";
-            this.fats_less_than.Size = new System.Drawing.Size(143, 60);
+            this.fats_less_than.Size = new System.Drawing.Size(112, 60);
             this.fats_less_than.TabIndex = 26;
             this.fats_less_than.ValueChanged += new System.EventHandler(this.fats_less_than_ValueChanged);
             // 
@@ -121,7 +199,7 @@
             0,
             0,
             0});
-            this.cals_less_than.Location = new System.Drawing.Point(665, 88);
+            this.cals_less_than.Location = new System.Drawing.Point(823, 90);
             this.cals_less_than.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cals_less_than.Maximum = new decimal(new int[] {
             1000000,
@@ -129,7 +207,7 @@
             0,
             0});
             this.cals_less_than.Name = "cals_less_than";
-            this.cals_less_than.Size = new System.Drawing.Size(143, 60);
+            this.cals_less_than.Size = new System.Drawing.Size(112, 60);
             this.cals_less_than.TabIndex = 25;
             this.cals_less_than.ValueChanged += new System.EventHandler(this.cals_less_than_ValueChanged);
             // 
@@ -149,7 +227,7 @@
             "All",
             "Public",
             "Private"});
-            this.privicy.Location = new System.Drawing.Point(21, 98);
+            this.privicy.Location = new System.Drawing.Point(844, 28);
             this.privicy.Name = "privicy";
             this.privicy.Size = new System.Drawing.Size(143, 36);
             this.privicy.StartIndex = 0;
@@ -241,26 +319,6 @@
             this.guna2Button1.UseTransparentBackground = true;
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
-            // guna2Button2
-            // 
-            this.guna2Button2.AutoRoundedCorners = true;
-            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.BorderRadius = 24;
-            this.guna2Button2.CheckedState.FillColor = System.Drawing.Color.White;
-            this.guna2Button2.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(1012, 28);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(199, 51);
-            this.guna2Button2.TabIndex = 14;
-            this.guna2Button2.Text = "Filter";
-            this.guna2Button2.UseTransparentBackground = true;
-            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
@@ -283,6 +341,8 @@
             this.Load += new System.EventHandler(this.coman_diet_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.carbsNumericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protienNumericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fats_less_than)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cals_less_than)).EndInit();
             this.ResumeLayout(false);
@@ -294,7 +354,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2TextBox searchTextBox1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private Guna.UI2.WinForms.Guna2ComboBox privicy;
         private Guna.UI2.WinForms.Guna2ComboBox filterTime;
@@ -303,5 +362,9 @@
         private Guna.UI2.WinForms.Guna2NumericUpDown cals_less_than;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label user_name;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2NumericUpDown carbsNumericUpDown1;
+        private Guna.UI2.WinForms.Guna2NumericUpDown protienNumericUpDown2;
     }
 }

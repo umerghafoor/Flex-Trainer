@@ -18,6 +18,7 @@ namespace Flex_Trainer
             InitializeComponent();
             this.admin_requests1.Visible = true;
             this.admin_home1.Visible = false;
+            this.admin_reports1.Visible = false;
             this.sign = sign;
         }
 
@@ -25,12 +26,14 @@ namespace Flex_Trainer
         {
             this.admin_requests1.Visible = true;
             this.admin_home1.Visible = false;
+            this.admin_reports1.Visible = false;
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
             this.admin_requests1.Visible = false;
             this.admin_home1.Visible = true;
+            this.admin_reports1.Visible = false;
         }
 
         private void page_admin_Load(object sender, EventArgs e)
@@ -53,6 +56,13 @@ namespace Flex_Trainer
         private void admin_requests1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            this.admin_reports1.Visible = true;
+            this.admin_requests1.Visible = false;
+            this.admin_home1.Visible = false;
         }
     }
 }

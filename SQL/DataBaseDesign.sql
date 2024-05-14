@@ -323,3 +323,21 @@ CREATE TABLE ChangeLog (
     ChangeDate DATETIME DEFAULT GETDATE(),
     ChangedData NVARCHAR(MAX) -- JSON or XML representation of the changed data
 );
+
+CREATE TABLE allergens
+(
+    allergen_id INT PRIMARY KEY,
+    allergen_name VARCHAR(50),
+    deity_id INT,
+    FOREIGN KEY (deity_id) REFERENCES Diet(Diet_ID)
+);
+
+
+-- log of gym details and total mebers by date
+DROP TABLE GymLog;
+CREATE TABLE GymLog (
+    LogID INT PRIMARY KEY IDENTITY(1,1),
+    GYM_SSN VARCHAR(11),
+    TotalMembers INT,
+    LogDate DATE DEFAULT GETDATE()
+);

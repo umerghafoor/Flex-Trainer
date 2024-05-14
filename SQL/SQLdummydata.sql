@@ -39,6 +39,9 @@ SELECT * FROM DietPlanUsesDiet;
 SELECT * FROM MemberHasGymMembership;
 SELECT * FROM WeeklyPlan;
 
+SELECT * FROM ChangeLog;
+
+SELECT * FROM GymLog;
 
 -- Insert dummy data into Member table
 INSERT INTO Member (Member_SSN, Gender, Gmail, Password, First_Name, Last_Name, Height, Weight)
@@ -324,3 +327,23 @@ VALUES
 INSERT INTO MemberHasGymMembership (Member_SSN, GYM_SSN, Start_Date, End_Date, type_membership)
 VALUES 
 ('11111111111', 'GYM_001', '2023-12-31', '2024-12-31', 'Gold');
+
+
+----------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------
+BULK INSERT Gym
+FROM 'D:\Users\Github\Flex-Trainer\SQL\data\Gym.csv'
+WITH (
+    FIELDTERMINATOR = ',',  
+    ROWTERMINATOR = '\n',   
+    FIRSTROW = 2 
+
+);
+
+SELECT * FROM Gym
+
+-- remove rows where gender = Polygender

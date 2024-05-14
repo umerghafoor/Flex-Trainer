@@ -18,15 +18,17 @@ namespace Flex_Trainer
         {
             InitializeComponent();
         }
-        public void setValues(string name, string tpye,string daytime ,string fats,string cal,string deitplan_id,string user_id)
+        public void setValues(string name, string tpye,string daytime ,string fats,string carbs,string protein, string cal,string deitplan_id,string user_id)
         {
             this.deit_id = deitplan_id;
             this.user_id = user_id;
             this.Diet_Name.Text = name;
             this.timofday.Text = daytime;
             this.typeofdiet.Text = tpye;
-            this.fats.Text = "Fats : " + fats;
-            this.cals.Text = "Cal : " + cal;
+            this.fats.Text = "Fats : " + fats + "g";
+            this.cals.Text = "Cal : " + cal + "Kcal";
+            this.carbslabel3.Text = "Carbs : " + carbs + "g";
+            this.protienlabel2.Text = "Protein : " + protein + "g";
         }
 
         private void guna2GradientPanel3_Paint(object sender, PaintEventArgs e)

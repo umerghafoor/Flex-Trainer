@@ -74,17 +74,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="admin_home.cs">
+    <Compile Include="componets\admin_home.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="admin_home.Designer.cs">
+    <Compile Include="componets\admin_home.Designer.cs">
       <DependentUpon>admin_home.cs</DependentUpon>
     </Compile>
-    <Compile Include="admin_requests.cs">
+    <Compile Include="componets\admin_requests.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="admin_requests.Designer.cs">
+    <Compile Include="componets\admin_requests.Designer.cs">
       <DependentUpon>admin_requests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="componets\admin_reports.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="componets\admin_reports.Designer.cs">
+      <DependentUpon>admin_reports.cs</DependentUpon>
     </Compile>
     <Compile Include="user_Book_Trainer.cs">
       <SubType>Form</SubType>
@@ -255,10 +261,10 @@
     <Compile Include="traner_set_availbilty.Designer.cs">
       <DependentUpon>traner_set_availbilty.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="admin_home.resx">
+    <EmbeddedResource Include="componets\admin_home.resx">
       <DependentUpon>admin_home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="admin_requests.resx">
+    <EmbeddedResource Include="componets\admin_requests.resx">
       <DependentUpon>admin_requests.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="coman_addworkout.resx">
@@ -350,6 +356,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="traner_set_availbilty.resx">
       <DependentUpon>traner_set_availbilty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="componets\admin_reports.resx">
+      <DependentUpon>admin_reports.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="user_Book_Trainer.resx">
       <DependentUpon>user_Book_Trainer.cs</DependentUpon>

@@ -18,6 +18,9 @@ namespace Flex_Trainer
         public string DayTime { get; set; }
         public string TotalFats { get; set; }
         public string TotalCals { get; set; }
+
+        public string TotalCarbs { get; set; }
+        public string TotalProteins { get; set; }
     }
 
     public partial class coman_diet : UserControl
@@ -46,6 +49,8 @@ namespace Flex_Trainer
                 string dayTime = row["day_time"].ToString();
                 string totalFats = row["total_fats"].ToString();
                 string totalCals = row["total_cals"].ToString();
+                string totalCarbs = row["total_carbs"].ToString();
+                string totalProteins = row["total_proteins"].ToString();
 
                 if (!dietPlanDictionary.ContainsKey(id))
                 {
@@ -56,7 +61,10 @@ namespace Flex_Trainer
                         Type = type,
                         DayTime = dayTime,
                         TotalFats = totalFats,
-                        TotalCals = totalCals
+                        TotalCals = totalCals,
+                        TotalCarbs = totalCarbs,
+                        TotalProteins = totalProteins
+
                     };
 
                     dietPlanDictionary.Add(id, dietPlan);
@@ -73,7 +81,9 @@ namespace Flex_Trainer
                         Type = type,
                         DayTime = dayTime,
                         TotalFats = totalFats,
-                        TotalCals = totalCals
+                        TotalCals = totalCals,
+                        TotalCarbs = totalCarbs,
+                        TotalProteins = totalProteins
                     };
                 }
             }
@@ -81,7 +91,7 @@ namespace Flex_Trainer
             foreach (var dietPlan in dietPlanDictionary.Values)
             {
                 dietPlanCard = new card_diet_plan();
-                dietPlanCard.setValues(dietPlan.Name, dietPlan.Type, dietPlan.Id, dietPlan.TotalFats, dietPlan.TotalCals,dietPlan.Id,userid);
+                dietPlanCard.setValues(dietPlan.Name, dietPlan.Type, dietPlan.Id, dietPlan.TotalFats, dietPlan.TotalCarbs, dietPlan.TotalProteins, dietPlan.TotalCals, dietPlan.Id, userid);
                 this.flowLayoutPanel1.Controls.Add(dietPlanCard);
             }
         }
@@ -186,6 +196,18 @@ namespace Flex_Trainer
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void carbsNumericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            DataTable dt = sql.GetDataTable("SELECT * FROM GetDietPlanDetails('" + userid + "') WHERE total_carbs < '" + this.carbsNumericUpDown1.Value + "'");
+            GetAllDietPlans(dt);
+        }
+
+        private void protienNumericUpDown2_ValueChanged(object sender, EventArgs e)
+        {
+            DataTable dt = sql.GetDataTable("SELECT * FROM GetDietPlanDetails('" + userid + "') WHERE total_proteins < '" + this.protienNumericUpDown2.Value + "'");
+            GetAllDietPlans(dt);
         }
     }
 }
